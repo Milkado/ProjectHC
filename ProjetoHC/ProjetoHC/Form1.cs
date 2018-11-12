@@ -49,6 +49,8 @@ namespace ProjetoHC
             cmbBoxGrupo.DisplayMember = "descricao";
             cmbBoxGrupo.ValueMember = "id_grupo";
             cmbBoxGrupo.DataSource = ds.Tables["Grupo"];
+            cmbBoxGrupo.SelectedIndex = -1;
+            connection.Close();
         }
 
         private void BtnCreate_Click(object sender, EventArgs e)

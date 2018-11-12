@@ -65,6 +65,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Atividade.cs" />
+    <Compile Include="DAL_Atividades.cs" />
     <Compile Include="DAL_Grupos.cs" />
     <Compile Include="DAL_Modalidades.cs" />
     <Compile Include="DAL_Users.cs" />

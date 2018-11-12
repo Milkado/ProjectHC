@@ -50,8 +50,8 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvAtiv = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAtiv)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbBoxGrupo
@@ -61,6 +61,7 @@
             this.cmbBoxGrupo.Name = "cmbBoxGrupo";
             this.cmbBoxGrupo.Size = new System.Drawing.Size(204, 21);
             this.cmbBoxGrupo.TabIndex = 0;
+            this.cmbBoxGrupo.SelectedIndexChanged += new System.EventHandler(this.cmbBoxGrupo_SelectedIndexChanged);
             this.cmbBoxGrupo.SelectedValueChanged += new System.EventHandler(this.cmbBoxGrupo_SelectedValueChanged);
             // 
             // label1
@@ -74,7 +75,6 @@
             // 
             // cmbBoxModal
             // 
-            this.cmbBoxModal.Enabled = false;
             this.cmbBoxModal.FormattingEnabled = true;
             this.cmbBoxModal.Location = new System.Drawing.Point(12, 120);
             this.cmbBoxModal.Name = "cmbBoxModal";
@@ -214,6 +214,7 @@
             this.btnGravar.TabIndex = 18;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = true;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // btnExcluir
             // 
@@ -243,20 +244,20 @@
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // dataGridView1
+            // dgvAtiv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 204);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(766, 135);
-            this.dataGridView1.TabIndex = 22;
+            this.dgvAtiv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAtiv.Location = new System.Drawing.Point(15, 204);
+            this.dgvAtiv.Name = "dgvAtiv";
+            this.dgvAtiv.Size = new System.Drawing.Size(766, 135);
+            this.dgvAtiv.TabIndex = 22;
             // 
             // FrmAtivCom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 362);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvAtiv);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnExcluir);
@@ -281,7 +282,7 @@
             this.Controls.Add(this.cmbBoxGrupo);
             this.Name = "FrmAtivCom";
             this.Text = "Cadastro de Atividades";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAtiv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,6 +312,6 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnReturn;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvAtiv;
     }
 }
