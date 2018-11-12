@@ -44,8 +44,9 @@ namespace ProjetoHC
         {
             connection.Close();
             OracleCommand cmdText = connection.CreateCommand();            
-            cmdText.CommandText = "select nome, id_modalidade from modalidade m inner join grupo g on (m.id_grupo = g.id_grupo) where g.id_grupo =1";
-            cmdText.Parameters.Add(":id_grupos", 1);
+            cmdText.CommandText = "select nome, id_modalidade from modalidade m inner join grupo g on (m.id_grupo = g.id_grupo) where g.id_grupo = :id_grupos";
+            cmdText.Parameters.Add(":id_grupos", Convert.ToInt32(cmbBoxGrupo.SelectedValue));
+            cmdText.BindByName = true;
             OracleDataAdapter da = new OracleDataAdapter(cmdText.CommandText, connection);            
             connection.Open();
             DataSet ds = new DataSet();

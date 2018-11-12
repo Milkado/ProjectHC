@@ -43,8 +43,8 @@ namespace ProjetoHC
             cmd.Parameters.Add(":nome", modalidade.nome);
             cmd.Parameters.Add(":pont_maxima", modalidade.pont_maxima);
             cmd.Parameters.Add(":tipo_pont", modalidade.tipo_pont);
-            cmd.Parameters.Add("comprovante", modalidade.comprovante);
-            cmd.Parameters.Add("id_grupo", modalidade.id_grupo);
+            cmd.Parameters.Add(":comprovante", modalidade.comprovante);
+            cmd.Parameters.Add(":id_grupo", modalidade.id_grupo);
             connection.Open();
             cmd.ExecuteNonQuery();
             connection.Close();
