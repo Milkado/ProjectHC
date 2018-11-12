@@ -1,0 +1,31 @@
+C:\Users\THE MAN\Documents\Projeto\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.csprojAssemblyReference.cache
+C:\Users\THE MAN\Documents\Projeto\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.FrmModalidade.resources
+C:\Users\THE MAN\Documents\Projeto\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.Properties.Resources.resources
+C:\Users\THE MAN\Documents\Projeto\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.csproj.GenerateResource.cache
+C:\Users\THE MAN\Documents\Projeto\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.csproj.CoreCompileInputs.cache
+C:\Users\THE MAN\Documents\Projeto\ProjetoHC\ProjetoHC\bin\Debug\ProjetoHC.exe.config
+C:\Users\THE MAN\Documents\Projeto\ProjetoHC\ProjetoHC\bin\Debug\ProjetoHC.exe
+C:\Users\THE MAN\Documents\Projeto\ProjetoHC\ProjetoHC\bin\Debug\ProjetoHC.pdb
+C:\Users\THE MAN\Documents\Projeto\ProjetoHC\ProjetoHC\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\THE MAN\Documents\Projeto\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.FrmLogar.resources
+C:\Users\THE MAN\Documents\Projeto\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.FrmMenu.resources
+C:\Users\THE MAN\Documents\Projeto\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.csproj.CopyComplete
+C:\Users\THE MAN\Documents\Projeto\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.exe
+C:\Users\THE MAN\Documents\Projeto\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.pdb
+C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\bin\Debug\ProjetoHC.exe.config
+C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\bin\Debug\ProjetoHC.exe
+C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\bin\Debug\ProjetoHC.pdb
+C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.csprojAssemblyReference.cache
+C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.FrmModalidade.resources
+C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.FrmLogar.resources
+C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.FrmMenu.resources
+C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.FrmGrupo.resources
+C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.Properties.Resources.resources
+C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.csproj.GenerateResource.cache
+C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.csproj.CoreCompileInputs.cache
+C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.csproj.CopyComplete
+C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.exe
+C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.pdb
+C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.FrmUsuario.resources
+C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.FrmAtivCom.resources
