@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGrupo));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -74,12 +75,15 @@
             // 
             // btn_gravar
             // 
+            this.btn_gravar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_gravar.FlatAppearance.BorderSize = 2;
+            this.btn_gravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_gravar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_gravar.Image = ((System.Drawing.Image)(resources.GetObject("btn_gravar.Image")));
             this.btn_gravar.Location = new System.Drawing.Point(7, 87);
             this.btn_gravar.Name = "btn_gravar";
             this.btn_gravar.Size = new System.Drawing.Size(105, 37);
             this.btn_gravar.TabIndex = 3;
-            this.btn_gravar.Text = "Gravar";
             this.btn_gravar.UseVisualStyleBackColor = true;
             this.btn_gravar.Click += new System.EventHandler(this.btn_gravar_Click);
             // 

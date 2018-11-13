@@ -39,6 +39,8 @@
             // 
             // btnTelaModal
             // 
+            this.btnTelaModal.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnTelaModal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTelaModal.Location = new System.Drawing.Point(12, 57);
             this.btnTelaModal.Name = "btnTelaModal";
             this.btnTelaModal.Size = new System.Drawing.Size(192, 51);
@@ -59,6 +61,8 @@
             // 
             // btnTelaGrupo
             // 
+            this.btnTelaGrupo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnTelaGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTelaGrupo.Location = new System.Drawing.Point(12, 114);
             this.btnTelaGrupo.Name = "btnTelaGrupo";
             this.btnTelaGrupo.Size = new System.Drawing.Size(192, 51);

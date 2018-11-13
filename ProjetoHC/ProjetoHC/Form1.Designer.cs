@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModalidade));
             this.BtnCreate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnCls = new System.Windows.Forms.Button();
@@ -50,24 +51,30 @@
             // 
             // BtnCreate
             // 
-            this.BtnCreate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.BtnCreate.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnCreate.FlatAppearance.BorderSize = 2;
+            this.BtnCreate.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BtnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCreate.Image = ((System.Drawing.Image)(resources.GetObject("BtnCreate.Image")));
             this.BtnCreate.Location = new System.Drawing.Point(12, 196);
             this.BtnCreate.Name = "BtnCreate";
             this.BtnCreate.Size = new System.Drawing.Size(105, 37);
             this.BtnCreate.TabIndex = 0;
-            this.BtnCreate.Text = "Gravar";
             this.BtnCreate.UseVisualStyleBackColor = true;
             this.BtnCreate.Click += new System.EventHandler(this.BtnCreate_Click);
             // 
             // btnDelete
             // 
+            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnDelete.FlatAppearance.BorderSize = 2;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.Location = new System.Drawing.Point(147, 196);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(105, 37);
             this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "Excluir";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
