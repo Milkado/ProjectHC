@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGrupo));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -76,10 +75,10 @@
             // btn_gravar
             // 
             this.btn_gravar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_gravar.FlatAppearance.BorderSize = 2;
+            this.btn_gravar.FlatAppearance.BorderSize = 0;
             this.btn_gravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_gravar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_gravar.Image = ((System.Drawing.Image)(resources.GetObject("btn_gravar.Image")));
+            this.btn_gravar.Image = global::ProjetoHC.GlobalImages.button_gravar;
             this.btn_gravar.Location = new System.Drawing.Point(7, 87);
             this.btn_gravar.Name = "btn_gravar";
             this.btn_gravar.Size = new System.Drawing.Size(105, 37);
@@ -89,23 +88,29 @@
             // 
             // btn_cancel
             // 
+            this.btn_cancel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_cancel.FlatAppearance.BorderSize = 2;
+            this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btn_cancel.Image = global::ProjetoHC.GlobalImages.button_cancelar;
             this.btn_cancel.Location = new System.Drawing.Point(301, 87);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(105, 37);
             this.btn_cancel.TabIndex = 4;
-            this.btn_cancel.Text = "Cancelar";
             this.btn_cancel.UseVisualStyleBackColor = true;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // btn_excluir
             // 
+            this.btn_excluir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_excluir.FlatAppearance.BorderSize = 2;
+            this.btn_excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_excluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btn_excluir.Image = global::ProjetoHC.GlobalImages.button_excluir2;
             this.btn_excluir.Location = new System.Drawing.Point(140, 86);
             this.btn_excluir.Name = "btn_excluir";
             this.btn_excluir.Size = new System.Drawing.Size(105, 37);
             this.btn_excluir.TabIndex = 5;
-            this.btn_excluir.Text = "Exlcuir";
             this.btn_excluir.UseVisualStyleBackColor = true;
             this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
             // 
@@ -157,7 +162,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(834, 281);
+            this.ClientSize = new System.Drawing.Size(748, 281);
             this.Controls.Add(this.dgvGrupos);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtCarga);

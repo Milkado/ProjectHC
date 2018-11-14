@@ -117,4 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="button_excluir2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\button_excluir2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_login_arredondado_à_direita_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8-login-arredondado-à-direita-48.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\button_cancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_gravar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\button_gravar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_adicionar_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8-adicionar-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_logar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\button_logar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Unifoa2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Unifoa2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_arquivo_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8-arquivo-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_desbloquear_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8-desbloquear-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unifoaLoogo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="icons8_senha_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8-senha-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_usuário_de_gênero_neutro_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8-usuário-de-gênero-neutro-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

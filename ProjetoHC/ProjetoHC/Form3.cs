@@ -20,8 +20,9 @@ namespace ProjetoHC
         private void btnTelaModal_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmModalidade frmModal = new FrmModalidade();
-            frmModal.Show();
+            FrmModalidade frmModalidade = new FrmModalidade();
+            frmModalidade.Show();
+             
         }
 
         private void button6_Click(object sender, EventArgs e)

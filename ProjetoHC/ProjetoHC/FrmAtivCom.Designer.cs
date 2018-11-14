@@ -75,6 +75,7 @@
             // 
             // cmbBoxModal
             // 
+            this.cmbBoxModal.Enabled = false;
             this.cmbBoxModal.FormattingEnabled = true;
             this.cmbBoxModal.Location = new System.Drawing.Point(12, 120);
             this.cmbBoxModal.Name = "cmbBoxModal";

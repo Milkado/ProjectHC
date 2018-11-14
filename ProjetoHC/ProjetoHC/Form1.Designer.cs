@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModalidade));
             this.BtnCreate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnCls = new System.Windows.Forms.Button();
@@ -56,7 +55,7 @@
             this.BtnCreate.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.WindowFrame;
             this.BtnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCreate.Image = ((System.Drawing.Image)(resources.GetObject("BtnCreate.Image")));
+            this.BtnCreate.Image = global::ProjetoHC.GlobalImages.button_gravar;
             this.BtnCreate.Location = new System.Drawing.Point(12, 196);
             this.BtnCreate.Name = "BtnCreate";
             this.BtnCreate.Size = new System.Drawing.Size(105, 37);
@@ -70,7 +69,7 @@
             this.btnDelete.FlatAppearance.BorderSize = 2;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.Image = global::ProjetoHC.GlobalImages.button_excluir2;
             this.btnDelete.Location = new System.Drawing.Point(147, 196);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(105, 37);
@@ -80,12 +79,15 @@
             // 
             // btnCls
             // 
+            this.btnCls.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCls.FlatAppearance.BorderSize = 2;
+            this.btnCls.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCls.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCls.Image = global::ProjetoHC.GlobalImages.button_cancelar;
             this.btnCls.Location = new System.Drawing.Point(287, 196);
             this.btnCls.Name = "btnCls";
             this.btnCls.Size = new System.Drawing.Size(105, 37);
             this.btnCls.TabIndex = 3;
-            this.btnCls.Text = "Cancelar";
             this.btnCls.UseVisualStyleBackColor = true;
             this.btnCls.Click += new System.EventHandler(this.btnCls_Click);
             // 

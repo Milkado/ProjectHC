@@ -17,6 +17,7 @@ namespace ProjetoHC
         public FrmLogar()
         {
             InitializeComponent();
+           
         }
 
         private void BtnLogar_Click(object sender, EventArgs e)
@@ -59,6 +60,11 @@ namespace ProjetoHC
             {
                 MessageBox.Show(ex.Message);
             }
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
         }
     }

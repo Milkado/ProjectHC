@@ -29,3 +29,4 @@ C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.exe
 C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.pdb
 C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.FrmUsuario.resources
 C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.FrmAtivCom.resources
+C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.GlobalImages.resources

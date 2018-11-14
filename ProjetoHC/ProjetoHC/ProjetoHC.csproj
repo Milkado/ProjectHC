@@ -107,6 +107,11 @@
     <Compile Include="FrmUsuario.Designer.cs">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="GlobalImages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalImages.resx</DependentUpon>
+    </Compile>
     <Compile Include="Grupo.cs" />
     <Compile Include="LoginID.cs" />
     <Compile Include="Modalidade.cs" />
@@ -130,6 +135,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsuario.resx">
       <DependentUpon>FrmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GlobalImages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GlobalImages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -168,7 +177,46 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-login-arredondado-à-direita-48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_excluir2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_gravar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-adicionar-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-adicionar-usuário-masculino-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-arquivo-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-desbloquear-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-joyent-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-senha-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unifoa2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_logar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-usuário-de-gênero-neutro-32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

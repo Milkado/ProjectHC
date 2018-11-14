@@ -35,7 +35,8 @@ namespace ProjetoHC
             cmbBoxGrupo.DisplayMember = "descricao";
             cmbBoxGrupo.ValueMember = "id_grupo";
             cmbBoxGrupo.DataSource = ds.Tables["Grupo"];
-            cmbBoxGrupo.SelectedIndex = -1;
+            
+            
             connection.Close();
             
         }
@@ -100,9 +101,14 @@ namespace ProjetoHC
 
         private void cmbBoxGrupo_SelectedValueChanged(object sender, EventArgs e)
         {
-
-            FillComboModalidade();
-            
+            if (Convert.ToInt32(cmbBoxGrupo.SelectedValue) != 0) {
+                //FillComboModalidade();
+                cmbBoxModal.Enabled = true;
+            }
+            else
+            {
+                cmbBoxModal.Enabled = false;
+            }
         }
 
         private void cmbBoxModal_SelectedIndexChanged(object sender, EventArgs e)
