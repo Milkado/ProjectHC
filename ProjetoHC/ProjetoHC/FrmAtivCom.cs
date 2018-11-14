@@ -35,20 +35,20 @@ namespace ProjetoHC
             cmbBoxGrupo.DisplayMember = "descricao";
             cmbBoxGrupo.ValueMember = "id_grupo";
             cmbBoxGrupo.DataSource = ds.Tables["Grupo"];
-            
-            
-            connection.Close();
-            
+            cmbBoxGrupo.SelectedIndex = -1;            
+            connection.Close();            
         }
 
         void FillComboModalidade()
         {
             connection.Close();
-            OracleCommand cmdText = connection.CreateCommand();            
-            cmdText.CommandText = "select nome, id_modalidade from modalidade m inner join grupo g on (m.id_grupo = g.id_grupo) where g.id_grupo = :id_grupos";
-            cmdText.Parameters.Add(":id_grupos", Convert.ToInt32(cmbBoxGrupo.SelectedValue));
-            cmdText.BindByName = true;
-            OracleDataAdapter da = new OracleDataAdapter(cmdText.CommandText, connection);            
+            string cmdText = "select nome, id_modalidade from modalidade m inner join grupo g on (m.id_grupo = g.id_grupo) where m.id_grupo = m.id_grupo";
+            OracleCommand cmd = new OracleCommand(cmdText);
+            cmd.Parameters.Clear();
+            //int value = Convert.ToInt32(cmbBoxGrupo.SelectedValue);
+            cmd.Parameters.Add("m.id_grupo", OracleDbType.Int32).Value = cmbBoxGrupo.SelectedItem;
+            OracleDataAdapter da = new OracleDataAdapter(cmd.CommandText, connection);
+            OracleCommandBuilder builder = new OracleCommandBuilder(da);
             connection.Open();
             DataSet ds = new DataSet();
             da.Fill(ds, "Modalidade");
@@ -56,6 +56,7 @@ namespace ProjetoHC
             cmbBoxModal.ValueMember = "id_modalidade";
             cmbBoxModal.DataSource = ds.Tables["Modalidade"];
             cmbBoxModal.SelectedIndex = -1;
+            connection.Close();
             
         }
 
@@ -101,9 +102,10 @@ namespace ProjetoHC
 
         private void cmbBoxGrupo_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(cmbBoxGrupo.SelectedValue) != 0) {
-                //FillComboModalidade();
+            if (this.cmbBoxGrupo.SelectedIndex > -1)
+            {
                 cmbBoxModal.Enabled = true;
+                FillComboModalidade();
             }
             else
             {

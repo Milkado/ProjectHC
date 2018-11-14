@@ -95,12 +95,12 @@ namespace ProjetoHC
 
             Grupo grupo = new Grupo();
             OracleConnection connection = DBConnection.DB_Connection;
-            connection.Close();
+            connection.Open();
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = connection;
             cmd.CommandText = "select id_grupo, descricao, carga_maxima from grupo where id_grupo = :id";
-            cmd.Parameters.Add(":id", id_grupo);
-            connection.Open();
+            cmd.Parameters.Add(":id", id_grupo);            
+            connection.Close();
             using (OracleDataReader reader = cmd.ExecuteReader())
             {
                 while (reader.Read())

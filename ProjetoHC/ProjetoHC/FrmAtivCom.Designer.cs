@@ -209,30 +209,39 @@
             // 
             // btnGravar
             // 
+            this.btnGravar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnGravar.FlatAppearance.BorderSize = 2;
+            this.btnGravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGravar.Image = global::ProjetoHC.GlobalImages.button_gravar;
             this.btnGravar.Location = new System.Drawing.Point(15, 161);
             this.btnGravar.Name = "btnGravar";
             this.btnGravar.Size = new System.Drawing.Size(105, 37);
             this.btnGravar.TabIndex = 18;
-            this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = true;
             this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // btnExcluir
             // 
+            this.btnExcluir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnExcluir.FlatAppearance.BorderSize = 2;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Image = global::ProjetoHC.GlobalImages.button_excluir2;
             this.btnExcluir.Location = new System.Drawing.Point(171, 161);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(105, 37);
             this.btnExcluir.TabIndex = 19;
-            this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             // 
             // btnCancel
             // 
+            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCancel.FlatAppearance.BorderSize = 2;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Image = global::ProjetoHC.GlobalImages.button_cancelar;
             this.btnCancel.Location = new System.Drawing.Point(325, 161);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(105, 37);
             this.btnCancel.TabIndex = 20;
-            this.btnCancel.Text = "Cancelar";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // btnReturn

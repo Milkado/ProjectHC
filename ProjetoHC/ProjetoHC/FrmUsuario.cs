@@ -65,12 +65,13 @@ namespace ProjetoHC
 
             Users users = new Users();
             OracleConnection connection = DBConnection.DB_Connection;
-            connection.Close();
+            connection.Open();
+            
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = connection;
             cmd.CommandText = "select id_user, user_name, user_password from tb_user where id_user = :id";
             cmd.Parameters.Add(":id", id_user);
-            connection.Open();
+            connection.Close();
             using (OracleDataReader reader = cmd.ExecuteReader())
             {
                 while (reader.Read())
