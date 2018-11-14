@@ -46,7 +46,8 @@ namespace ProjetoHC
             OracleCommand cmd = new OracleCommand(cmdText);
             cmd.Parameters.Clear();
             //int value = Convert.ToInt32(cmbBoxGrupo.SelectedValue);
-            cmd.Parameters.Add("m.id_grupo", OracleDbType.Int32).Value = cmbBoxGrupo.SelectedItem;
+            
+            cmd.Parameters.Add("m.id_grupo", OracleDbType.Int32).Value = cmbBoxGrupo.SelectedValue;
             OracleDataAdapter da = new OracleDataAdapter(cmd.CommandText, connection);
             OracleCommandBuilder builder = new OracleCommandBuilder(da);
             connection.Open();

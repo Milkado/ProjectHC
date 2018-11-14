@@ -1,5 +1,5 @@
 --------------------------------------------------------
---  Arquivo criado - Segunda-feira-Novembro-12-2018   
+--  Arquivo criado - Quarta-feira-Novembro-14-2018   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Sequence SEQ_ID_ALUNO
@@ -15,7 +15,7 @@
 --  DDL for Sequence SEQ_ID_MODALIDADE
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "PROJECTHC"."SEQ_ID_MODALIDADE"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE ;
+   CREATE SEQUENCE  "PROJECTHC"."SEQ_ID_MODALIDADE"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 41 CACHE 20 NOORDER  NOCYCLE ;
 --------------------------------------------------------
 --  DDL for Sequence SEQ_ID_USER
 --------------------------------------------------------
@@ -45,7 +45,8 @@
 	"DOCUMENTO" VARCHAR2(60 BYTE), 
 	"TEMPO" NUMBER(*,0), 
 	"ID_GRUPO" NUMBER(*,0), 
-	"ID_MODALIDADE" NUMBER(*,0)
+	"ID_MODALIDADE" NUMBER(*,0), 
+	"ID_ALUNO" NUMBER(*,0)
    ) SEGMENT CREATION IMMEDIATE 
   PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
@@ -110,6 +111,38 @@ a participação com registro
 de carga horária.');
 Insert into PROJECTHC.MODALIDADE (ID_MODALIDADE,PONT_MAXIMA,TIPO_PONT,ID_GRUPO,NOME,COMPROVANTE) values ('2','40','CH da Discliplina','1','Disciplinas oferecidas por outros cursos do UniFOA','Certificado, Declaração ou Documento afim atestando a participação com registro de carga horária.');
 Insert into PROJECTHC.MODALIDADE (ID_MODALIDADE,PONT_MAXIMA,TIPO_PONT,ID_GRUPO,NOME,COMPROVANTE) values ('3','80','CH Certificada','1','Cursos de aperfeiçoamento e de aprofundamento acadêmico-profissional','Certificado, Declaração ou Documento afim atestando a participação com registro de carga horária.');
+Insert into PROJECTHC.MODALIDADE (ID_MODALIDADE,PONT_MAXIMA,TIPO_PONT,ID_GRUPO,NOME,COMPROVANTE) values ('21','80','CH Certificada','1','Exercício de Monitoria','Certificado, Declaração ou
+Documento afim atestando
+a participação com registro
+de carga horária.');
+Insert into PROJECTHC.MODALIDADE (ID_MODALIDADE,PONT_MAXIMA,TIPO_PONT,ID_GRUPO,NOME,COMPROVANTE) values ('22','40','CH Certificada','1','Outros tipos','Certificado, Declaração ou
+Documento afim atestando
+a participação com registro
+de carga horária.');
+Insert into PROJECTHC.MODALIDADE (ID_MODALIDADE,PONT_MAXIMA,TIPO_PONT,ID_GRUPO,NOME,COMPROVANTE) values ('23','80','CH Certificada','2','Estágios conveniados','Termo de Compromisso
+de Estágio (TCE) ou
+similar.
+Relatório técnico1 de
+estágio com registro da
+carga horária.');
+Insert into PROJECTHC.MODALIDADE (ID_MODALIDADE,PONT_MAXIMA,TIPO_PONT,ID_GRUPO,NOME,COMPROVANTE) values ('24','40','CH Certificada','2','Extensão comunitária','Certificado, Declaração ou
+Documento afim atestando
+a participação com registro
+de carga horária.
+Relatório técnico das
+atividades realizadas.');
+Insert into PROJECTHC.MODALIDADE (ID_MODALIDADE,PONT_MAXIMA,TIPO_PONT,ID_GRUPO,NOME,COMPROVANTE) values ('25','40','CH Certificada','2','Curso de capacitação de','Certificado, Declaração ou
+Documento afim atestando
+a participação com registro
+de carga horária.
+Relatório técnico das
+atividades realizadas.');
+Insert into PROJECTHC.MODALIDADE (ID_MODALIDADE,PONT_MAXIMA,TIPO_PONT,ID_GRUPO,NOME,COMPROVANTE) values ('26','80','CH Certificada','2','Cursos Ministrados','Certificado, Declaração ou
+Documento afim atestando
+a participação com registro
+de carga horária.
+Relatório técnico das
+atividades realizadas.');
 REM INSERTING into PROJECTHC.TB_USER
 SET DEFINE OFF;
 Insert into PROJECTHC.TB_USER (ID_USER,USER_NAME,USER_PASSWORD) values ('1','admin','admin');
@@ -187,7 +220,7 @@ ALTER TRIGGER "PROJECTHC"."TRG_ID_USER" ENABLE;
 --------------------------------------------------------
 
   ALTER TABLE "PROJECTHC"."ALUNO" ADD PRIMARY KEY ("ID_ALUNO")
-  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "SYSTEM"  ENABLE;
@@ -206,7 +239,7 @@ ALTER TRIGGER "PROJECTHC"."TRG_ID_USER" ENABLE;
 --------------------------------------------------------
 
   ALTER TABLE "PROJECTHC"."ATIVIDADE" ADD PRIMARY KEY ("ID_ATIVIDADE")
-  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "SYSTEM"  ENABLE;
@@ -225,6 +258,8 @@ ALTER TRIGGER "PROJECTHC"."TRG_ID_USER" ENABLE;
 --  Ref Constraints for Table ATIVIDADE
 --------------------------------------------------------
 
+  ALTER TABLE "PROJECTHC"."ATIVIDADE" ADD CONSTRAINT "FK_ID_ALUNO_ATIV" FOREIGN KEY ("ID_ALUNO")
+	  REFERENCES "PROJECTHC"."ALUNO" ("ID_ALUNO") ENABLE;
   ALTER TABLE "PROJECTHC"."ATIVIDADE" ADD CONSTRAINT "FK_ID_GRUPO_ATIVIDADE" FOREIGN KEY ("ID_GRUPO")
 	  REFERENCES "PROJECTHC"."GRUPO" ("ID_GRUPO") ENABLE;
   ALTER TABLE "PROJECTHC"."ATIVIDADE" ADD CONSTRAINT "FK_ID_MODALIDADE_ATIVIDADE" FOREIGN KEY ("ID_MODALIDADE")
