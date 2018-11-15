@@ -218,5 +218,32 @@
   <ItemGroup>
     <None Include="Resources\icons8-usuário-de-gênero-neutro-32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_cadastroUser.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_modal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_atividade.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_relatorio.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_encerrar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_logout.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_grupo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_entrar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_entrar1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

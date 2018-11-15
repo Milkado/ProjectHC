@@ -46,8 +46,9 @@
             // 
             this.BtnLogar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BtnLogar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnLogar.FlatAppearance.BorderSize = 0;
             this.BtnLogar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnLogar.Image = global::ProjetoHC.GlobalImages.button_logar;
+            this.BtnLogar.Image = global::ProjetoHC.GlobalImages.button_entrar1;
             this.BtnLogar.Location = new System.Drawing.Point(220, 221);
             this.BtnLogar.Name = "BtnLogar";
             this.BtnLogar.Size = new System.Drawing.Size(111, 47);

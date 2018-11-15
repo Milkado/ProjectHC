@@ -43,8 +43,9 @@
             // btnTelaModal
             // 
             this.btnTelaModal.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnTelaModal.FlatAppearance.BorderSize = 2;
+            this.btnTelaModal.FlatAppearance.BorderSize = 0;
             this.btnTelaModal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTelaModal.Image = global::ProjetoHC.GlobalImages.button_modal;
             this.btnTelaModal.Location = new System.Drawing.Point(22, 114);
             this.btnTelaModal.Name = "btnTelaModal";
             this.btnTelaModal.Size = new System.Drawing.Size(192, 51);
@@ -55,8 +56,9 @@
             // btnAC
             // 
             this.btnAC.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAC.FlatAppearance.BorderSize = 2;
+            this.btnAC.FlatAppearance.BorderSize = 0;
             this.btnAC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAC.Image = global::ProjetoHC.GlobalImages.button_atividade;
             this.btnAC.Location = new System.Drawing.Point(22, 171);
             this.btnAC.Name = "btnAC";
             this.btnAC.Size = new System.Drawing.Size(192, 51);
@@ -67,8 +69,9 @@
             // btnTelaGrupo
             // 
             this.btnTelaGrupo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnTelaGrupo.FlatAppearance.BorderSize = 2;
+            this.btnTelaGrupo.FlatAppearance.BorderSize = 0;
             this.btnTelaGrupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTelaGrupo.Image = global::ProjetoHC.GlobalImages.button_grupo;
             this.btnTelaGrupo.Location = new System.Drawing.Point(22, 57);
             this.btnTelaGrupo.Name = "btnTelaGrupo";
             this.btnTelaGrupo.Size = new System.Drawing.Size(192, 51);
@@ -79,8 +82,10 @@
             // button6
             // 
             this.button6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(706, 228);
+            this.button6.Image = global::ProjetoHC.GlobalImages.button_encerrar;
+            this.button6.Location = new System.Drawing.Point(508, 228);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(192, 51);
             this.button6.TabIndex = 5;
@@ -90,8 +95,9 @@
             // button7
             // 
             this.button7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button7.FlatAppearance.BorderSize = 2;
+            this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Image = global::ProjetoHC.GlobalImages.button_relatorio;
             this.button7.Location = new System.Drawing.Point(22, 228);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(192, 51);
@@ -101,8 +107,10 @@
             // button1
             // 
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(508, 228);
+            this.button1.Image = global::ProjetoHC.GlobalImages.button_logout;
+            this.button1.Location = new System.Drawing.Point(706, 228);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(192, 51);
             this.button1.TabIndex = 7;
@@ -114,6 +122,7 @@
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::ProjetoHC.GlobalImages.button_cadastroUser;
             this.button2.Location = new System.Drawing.Point(706, 57);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(192, 51);
@@ -153,6 +162,7 @@
             this.Controls.Add(this.btnTelaGrupo);
             this.Controls.Add(this.btnAC);
             this.Controls.Add(this.btnTelaModal);
+            this.Enabled = false;
             this.Name = "FrmMenu";
             this.Text = "Menu Principal";
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxChange)).EndInit();
