@@ -150,8 +150,7 @@
             // 
             // FrmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(910, 286);
             this.Controls.Add(this.pctBoxChange);
             this.Controls.Add(this.lblBlocked);
@@ -162,7 +161,6 @@
             this.Controls.Add(this.btnTelaGrupo);
             this.Controls.Add(this.btnAC);
             this.Controls.Add(this.btnTelaModal);
-            this.Enabled = false;
             this.Name = "FrmMenu";
             this.Text = "Menu Principal";
             ((System.ComponentModel.ISupportInitialize)(this.pctBoxChange)).EndInit();

@@ -245,5 +245,8 @@
   <ItemGroup>
     <None Include="Resources\button_entrar1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-trancar-32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

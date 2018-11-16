@@ -41,16 +41,14 @@ namespace ProjetoHC
 
         void FillComboModalidade()
         {
-            connection.Close();
-            string cmdText = "select nome, id_modalidade from modalidade m inner join grupo g on (m.id_grupo = g.id_grupo) where m.id_grupo = m.id_grupo";
-            OracleCommand cmd = new OracleCommand(cmdText);
-            cmd.Parameters.Clear();
-            //int value = Convert.ToInt32(cmbBoxGrupo.SelectedValue);
-            
-            cmd.Parameters.Add("m.id_grupo", OracleDbType.Int32).Value = cmbBoxGrupo.SelectedValue;
-            OracleDataAdapter da = new OracleDataAdapter(cmd.CommandText, connection);
-            OracleCommandBuilder builder = new OracleCommandBuilder(da);
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = connection;
+            cmd.CommandText = "PROC_SELECT_MODAL";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("id_grupo", OracleDbType.Int32).Value = cmbBoxGrupo.SelectedValue;
+            OracleDataAdapter da = new OracleDataAdapter();
             connection.Open();
+            da.SelectCommand = cmd;
             DataSet ds = new DataSet();
             da.Fill(ds, "Modalidade");
             cmbBoxModal.DisplayMember = "nome";

@@ -211,16 +211,6 @@ namespace ProjetoHC {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_desbloquear_32 {
-            get {
-                object obj = ResourceManager.GetObject("icons8_desbloquear_32", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon icons8_login_arredondado_à_direita_48 {
@@ -253,6 +243,16 @@ namespace ProjetoHC {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap locked {
+            get {
+                object obj = ResourceManager.GetObject("locked", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Unifoa2 {
             get {
                 object obj = ResourceManager.GetObject("Unifoa2", resourceCulture);
@@ -266,6 +266,16 @@ namespace ProjetoHC {
         internal static string unifoaLoogo {
             get {
                 return ResourceManager.GetString("unifoaLoogo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unlocked_image {
+            get {
+                object obj = ResourceManager.GetObject("unlocked_image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

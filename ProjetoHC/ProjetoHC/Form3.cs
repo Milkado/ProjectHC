@@ -1,8 +1,10 @@
-﻿using System;
+﻿using ProjetoHC.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +17,20 @@ namespace ProjetoHC
         public FrmMenu()
         {
             InitializeComponent();
+            userAdmin();
+        }
+
+        void userAdmin()
+        {
+            if(LoginID.UserID == "admin")
+            {
+                pctBoxChange.Image = GlobalImages.unlocked_image;
+          
+            }else
+            {
+                pctBoxChange.Image = GlobalImages.locked;
+                lblBlocked.Visible = true;
+            }         
         }
 
         private void btnTelaModal_Click(object sender, EventArgs e)
