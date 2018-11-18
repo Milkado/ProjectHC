@@ -210,7 +210,7 @@
             // btnGravar
             // 
             this.btnGravar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnGravar.FlatAppearance.BorderSize = 2;
+            this.btnGravar.FlatAppearance.BorderSize = 0;
             this.btnGravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGravar.Image = global::ProjetoHC.GlobalImages.button_gravar;
             this.btnGravar.Location = new System.Drawing.Point(15, 161);
@@ -223,7 +223,7 @@
             // btnExcluir
             // 
             this.btnExcluir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnExcluir.FlatAppearance.BorderSize = 2;
+            this.btnExcluir.FlatAppearance.BorderSize = 0;
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Image = global::ProjetoHC.GlobalImages.button_excluir2;
             this.btnExcluir.Location = new System.Drawing.Point(171, 161);
@@ -235,7 +235,7 @@
             // btnCancel
             // 
             this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCancel.FlatAppearance.BorderSize = 2;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Image = global::ProjetoHC.GlobalImages.button_cancelar;
             this.btnCancel.Location = new System.Drawing.Point(325, 161);
@@ -246,11 +246,14 @@
             // 
             // btnReturn
             // 
+            this.btnReturn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnReturn.FlatAppearance.BorderSize = 0;
+            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReturn.Image = global::ProjetoHC.GlobalImages.button_retornar;
             this.btnReturn.Location = new System.Drawing.Point(469, 161);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(312, 37);
             this.btnReturn.TabIndex = 21;
-            this.btnReturn.Text = "Retornar ao menu principal";
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 

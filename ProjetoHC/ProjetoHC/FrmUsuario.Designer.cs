@@ -76,34 +76,40 @@
             // 
             // btnCadastrar
             // 
+            this.btnCadastrar.FlatAppearance.BorderSize = 0;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.btnCadastrar.Location = new System.Drawing.Point(13, 132);
+            this.btnCadastrar.Image = global::ProjetoHC.GlobalImages.button_gravar;
+            this.btnCadastrar.Location = new System.Drawing.Point(16, 134);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(105, 37);
             this.btnCadastrar.TabIndex = 3;
-            this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnCancel
             // 
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btnCancel.Image = global::ProjetoHC.GlobalImages.button_cancelar;
             this.btnCancel.Location = new System.Drawing.Point(166, 134);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(105, 37);
             this.btnCancel.TabIndex = 4;
-            this.btnCancel.Text = "Cancelar";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnExcluir
             // 
+            this.btnExcluir.FlatAppearance.BorderSize = 0;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.btnExcluir.Image = global::ProjetoHC.GlobalImages.button_excluir2;
             this.btnExcluir.Location = new System.Drawing.Point(318, 132);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(105, 37);
             this.btnExcluir.TabIndex = 5;
-            this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Visible = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -149,11 +155,13 @@
             // 
             // btnReturn
             // 
+            this.btnReturn.FlatAppearance.BorderSize = 0;
+            this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReturn.Image = global::ProjetoHC.GlobalImages.button_retornar;
             this.btnReturn.Location = new System.Drawing.Point(476, 133);
             this.btnReturn.Name = "btnReturn";
             this.btnReturn.Size = new System.Drawing.Size(312, 37);
             this.btnReturn.TabIndex = 11;
-            this.btnReturn.Text = "Retornar ao Menu Principal";
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 

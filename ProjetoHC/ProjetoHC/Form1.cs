@@ -17,31 +17,18 @@ namespace ProjetoHC
         {
             InitializeComponent();
             SelectModalidades();
-            FillCombo();
+            combo.ComboGrupo(cmbBoxGrupo);
 
         }
 
         private Modalidade modalidadeAtual;
         private DAL_Modalidades dal = new DAL_Modalidades();
         OracleConnection connection = DBConnection.DB_Connection;
+        FillComboGrupo combo = new FillComboGrupo();
 
-        void FillCombo()
+        /*void FillCombo()
         {     
             string cmdText = "select descricao, id_grupo from grupo";
-            /*using (OracleCommand cmd = new OracleCommand(cmdText, connection))
-            {
-                connection.Open();
-                using (OracleDataReader reader = cmd.ExecuteReader())
-                {
-                    List<String> items = new List<String>();
-
-                    while (reader.Read())
-                    {
-                        items.Add(String.Format("{0}, {1}", reader.GetValue(0), reader.GetValue(1)));
-                    }
-                    cmbBoxGrupo.Items.AddRange(items.ToArray());
-                }
-            }*/
             OracleDataAdapter da = new OracleDataAdapter(cmdText, connection);
             connection.Open();
             DataSet ds = new DataSet();
@@ -51,7 +38,7 @@ namespace ProjetoHC
             cmbBoxGrupo.DataSource = ds.Tables["Grupo"];
             cmbBoxGrupo.SelectedIndex = -1;
             connection.Close();
-        }
+        }*/
 
         private void BtnCreate_Click(object sender, EventArgs e)
         {

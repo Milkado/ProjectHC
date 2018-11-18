@@ -16,7 +16,7 @@ namespace ProjetoHC
         public FrmAtivCom()
         {
             InitializeComponent();
-            FillComboGrupo();
+            combo.ComboGrupo(cmbBoxGrupo);
 
 
         }
@@ -24,8 +24,9 @@ namespace ProjetoHC
         OracleConnection connection = DBConnection.DB_Connection;
         private Atividade atividadeAtual;
         private DAL_Atividades dal = new DAL_Atividades();
+        FillComboGrupo combo = new FillComboGrupo();
 
-        void FillComboGrupo()
+        /*void FillComboGrupo()
         {
             string cmdText = "select descricao, id_grupo from grupo";
             OracleDataAdapter da = new OracleDataAdapter(cmdText, connection);
@@ -37,18 +38,17 @@ namespace ProjetoHC
             cmbBoxGrupo.DataSource = ds.Tables["Grupo"];
             cmbBoxGrupo.SelectedIndex = -1;            
             connection.Close();            
-        }
+        }*/
 
         void FillComboModalidade()
         {
-            OracleCommand cmd = new OracleCommand();
+            connection.Close();
+            string cmdText = "select nome, id_modalidade from modalidade where id_grupo = :id_grupo";
+            OracleCommand cmd = new OracleCommand(cmdText);
             cmd.Connection = connection;
-            cmd.CommandText = "PROC_SELECT_MODAL";
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("id_grupo", OracleDbType.Int32).Value = cmbBoxGrupo.SelectedValue;
-            OracleDataAdapter da = new OracleDataAdapter();
+            cmd.Parameters.Add(":id_grupo", cmbBoxGrupo.SelectedValue);
+            OracleDataAdapter da = new OracleDataAdapter(cmd);
             connection.Open();
-            da.SelectCommand = cmd;
             DataSet ds = new DataSet();
             da.Fill(ds, "Modalidade");
             cmbBoxModal.DisplayMember = "nome";

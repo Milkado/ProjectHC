@@ -193,6 +193,16 @@ namespace ProjetoHC {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap button_retornar {
+            get {
+                object obj = ResourceManager.GetObject("button_retornar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_adicionar_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_adicionar_32", resourceCulture);

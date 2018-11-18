@@ -89,11 +89,11 @@
             // btn_cancel
             // 
             this.btn_cancel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_cancel.FlatAppearance.BorderSize = 2;
+            this.btn_cancel.FlatAppearance.BorderSize = 0;
             this.btn_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.btn_cancel.Image = global::ProjetoHC.GlobalImages.button_cancelar;
-            this.btn_cancel.Location = new System.Drawing.Point(301, 87);
+            this.btn_cancel.Location = new System.Drawing.Point(283, 87);
             this.btn_cancel.Name = "btn_cancel";
             this.btn_cancel.Size = new System.Drawing.Size(105, 37);
             this.btn_cancel.TabIndex = 4;
@@ -103,11 +103,11 @@
             // btn_excluir
             // 
             this.btn_excluir.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_excluir.FlatAppearance.BorderSize = 2;
+            this.btn_excluir.FlatAppearance.BorderSize = 0;
             this.btn_excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_excluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.btn_excluir.Image = global::ProjetoHC.GlobalImages.button_excluir2;
-            this.btn_excluir.Location = new System.Drawing.Point(140, 86);
+            this.btn_excluir.Location = new System.Drawing.Point(147, 87);
             this.btn_excluir.Name = "btn_excluir";
             this.btn_excluir.Size = new System.Drawing.Size(105, 37);
             this.btn_excluir.TabIndex = 5;
@@ -116,12 +116,14 @@
             // 
             // button4
             // 
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.button4.Image = global::ProjetoHC.GlobalImages.button_retornar;
             this.button4.Location = new System.Drawing.Point(424, 87);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(312, 37);
             this.button4.TabIndex = 6;
-            this.button4.Text = "Retornar ao Menu Principal";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
