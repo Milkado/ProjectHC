@@ -102,6 +102,12 @@
     <Compile Include="FrmAtivCom.Designer.cs">
       <DependentUpon>FrmAtivCom.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRelatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatorios.Designer.cs">
+      <DependentUpon>FrmRelatorios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
