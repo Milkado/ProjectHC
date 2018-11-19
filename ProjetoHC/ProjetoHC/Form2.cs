@@ -48,6 +48,7 @@ namespace ProjetoHC
                 if(rowCount == 1)
                 {
                     LoginID.UserID = txtUser.Text;
+                    LoginID.name = ds.Tables[0].Rows[0]["nome_user"].ToString();
                     this.Hide();
                     FrmMenu fm = new FrmMenu();
                     fm.Show();

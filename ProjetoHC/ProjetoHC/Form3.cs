@@ -9,28 +9,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bunifu.Framework;
 
 namespace ProjetoHC
 {
+      
     public partial class FrmMenu : Form
     {
+        
         public FrmMenu()
         {
             InitializeComponent();
             userAdmin();
+            container.Controls.Add(dashControl);
+            this.Icon = GlobalImages.icon;
         }
-
+        dashControl dashControl = new dashControl();
+        Relatorios Relatorios = new Relatorios();
+        
         void userAdmin()
         {
-            if(LoginID.UserID == "admin")
-            {
-                pctBoxChange.Image = GlobalImages.unlocked_image;
-          
-            }else
-            {
-                pctBoxChange.Image = GlobalImages.locked;
-                lblBlocked.Visible = true;
-            }         
+            
         }
 
         private void btnTelaModal_Click(object sender, EventArgs e)
@@ -55,9 +54,7 @@ namespace ProjetoHC
 
         private void btnTelaGrupo_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmGrupo frmGrupo = new FrmGrupo();
-            frmGrupo.Show();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -79,6 +76,83 @@ namespace ProjetoHC
             this.Hide();
             FrmRelatorios frmRelatorios = new FrmRelatorios();
             frmRelatorios.Show();
+        }
+
+        private void FrmMenu_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void FrmMenu_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void FrmMenu_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void sidePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonGrupo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmGrupo frmGrupo = new FrmGrupo();
+            frmGrupo.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+                this.WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        private void buttonModali_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAtivdade_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonRelatorio_Click(object sender, EventArgs e)
+        {
+            container.Controls.Clear();
+            container.Controls.Add(Relatorios);
+        }
+
+        private void buttonUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            container.Controls.Clear();
+            container.Controls.Add(dashControl);
         }
     }
 }

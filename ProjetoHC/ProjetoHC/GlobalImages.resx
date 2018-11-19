@@ -118,8 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="button_excluir2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\button_excluir2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_encerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\button_encerrar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_relatorio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\button_relatorio.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_login_arredondado_à_direita_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\icons8-login-arredondado-à-direita-48.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -127,32 +130,71 @@
   <data name="button_cadastroUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\button_cadastroUser.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button_cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\button_cancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="userAdd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8-adicionar-usuário-masculino-321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button_gravar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\button_gravar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="time" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8-intervalo-de-tempo-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button_encerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\button_encerrar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_modal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\button_modal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_arquivo_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\icons8-arquivo-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Unifoa2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Unifoa2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8-minimizar-janela-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maximizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8-maximizar-janela-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="locked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8-trancar-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="unifoaLoogo" xml:space="preserve">
+    <value />
+  </data>
   <data name="icons8_adicionar_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\icons8-adicionar-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button_logar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\button_logar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_gravar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\button_gravar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_atividade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\button_atividade.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_usuário_de_gênero_neutro_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8-usuário-de-gênero-neutro-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="unlocked_image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\icons8-desbloquear-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Unifoa2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\Unifoa2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="button_logar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\button_logar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_cancelar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\button_cancelar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="closeBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8-excluir-40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_senha_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8-senha-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_retornar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\button_retornar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button_entrar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\button_entrar1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_grupo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\button_grupo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="button_excluir2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\button_excluir2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button_entrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\button_entrar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,31 +202,10 @@
   <data name="button_logout" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\button_logout.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8_usuário_de_gênero_neutro_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\icons8-usuário-de-gênero-neutro-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="closeRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\icons8-fechar-janela-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="button_grupo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\button_grupo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_atividade" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\button_atividade.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="locked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\icons8-trancar-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_modal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\button_modal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="unifoaLoogo" xml:space="preserve">
-    <value />
-  </data>
-  <data name="icons8_senha_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\icons8-senha-32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_relatorio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\button_relatorio.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="button_retornar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\button_retornar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>icons8-intervalo-de-tempo-80.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

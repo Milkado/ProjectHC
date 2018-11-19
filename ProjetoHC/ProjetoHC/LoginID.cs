@@ -9,5 +9,6 @@ namespace ProjetoHC
     public static class LoginID
     {
         public static string UserID;
+        public static string name;
     }
 }
