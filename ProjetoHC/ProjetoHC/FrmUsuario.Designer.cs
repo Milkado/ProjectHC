@@ -122,7 +122,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 16);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Confrimar Senha";
+            this.label4.Text = "Confirmar Senha";
             // 
             // txtIdUsuario
             // 

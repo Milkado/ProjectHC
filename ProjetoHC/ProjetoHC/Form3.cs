@@ -22,10 +22,11 @@ namespace ProjetoHC
             InitializeComponent();
             userAdmin();
             container.Controls.Add(dashControl);
-            this.Icon = GlobalImages.icon;
+            Icon = GlobalImages.icon;
         }
         dashControl dashControl = new dashControl();
         Relatorios Relatorios = new Relatorios();
+        GrupoControl grupo = new GrupoControl();
         
         void userAdmin()
         {
@@ -105,9 +106,8 @@ namespace ProjetoHC
 
         private void buttonGrupo_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmGrupo frmGrupo = new FrmGrupo();
-            frmGrupo.Show();
+            container.Controls.Clear();
+            container.Controls.Add(grupo);
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -130,12 +130,16 @@ namespace ProjetoHC
 
         private void buttonModali_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FrmModalidade frmModalidade = new FrmModalidade();
+            frmModalidade.Show();
         }
 
         private void buttonAtivdade_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FrmAtivCom frm = new FrmAtivCom();
+            frm.Show();
         }
 
         private void buttonRelatorio_Click(object sender, EventArgs e)
@@ -146,13 +150,22 @@ namespace ProjetoHC
 
         private void buttonUser_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            FrmUsuario frmUsuario = new FrmUsuario();
+            frmUsuario.Show();
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             container.Controls.Clear();
             container.Controls.Add(dashControl);
+        }
+
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmLogar frmLogar = new FrmLogar();
+            frmLogar.Show();
         }
     }
 }

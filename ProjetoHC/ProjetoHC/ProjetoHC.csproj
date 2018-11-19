@@ -132,6 +132,12 @@
       <DependentUpon>GlobalImages.resx</DependentUpon>
     </Compile>
     <Compile Include="Grupo.cs" />
+    <Compile Include="GrupoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GrupoControl.Designer.cs">
+      <DependentUpon>GrupoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginID.cs" />
     <Compile Include="Modalidade.cs" />
     <Compile Include="Program.cs" />
@@ -167,6 +173,9 @@
     <EmbeddedResource Include="GlobalImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>GlobalImages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GrupoControl.resx">
+      <DependentUpon>GrupoControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

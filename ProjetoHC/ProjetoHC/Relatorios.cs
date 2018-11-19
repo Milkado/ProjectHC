@@ -18,6 +18,7 @@ namespace ProjetoHC
             this.Dock = DockStyle.Fill;
             tblLayoutTop.Dock = DockStyle.Top;
             panelBottom.Dock = DockStyle.Bottom;
+            dgvRelatorio.Dock = DockStyle.Fill;
             
         }
     }

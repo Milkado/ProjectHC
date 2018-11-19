@@ -33,3 +33,4 @@ C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.GlobalImages.resou
 C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\bin\Debug\Bunifu_UI_v1.5.3.dll
 C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.dashControl.resources
 C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.Relatorios.resources
+C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.GrupoControl.resources

@@ -37,6 +37,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.sidePanel = new System.Windows.Forms.Panel();
+            this.buttonLogout = new Bunifu.Framework.UI.BunifuFlatButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -166,6 +167,7 @@
             // sidePanel
             // 
             this.sidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(86)))), ((int)(((byte)(159)))));
+            this.sidePanel.Controls.Add(this.buttonLogout);
             this.sidePanel.Controls.Add(this.flowLayoutPanel1);
             this.sidePanel.Controls.Add(this.bunifuFlatButton1);
             this.sidePanel.Controls.Add(this.buttonUser);
@@ -180,6 +182,44 @@
             this.sidePanel.Size = new System.Drawing.Size(219, 434);
             this.sidePanel.TabIndex = 12;
             this.sidePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.sidePanel_Paint);
+            // 
+            // buttonLogout
+            // 
+            this.buttonLogout.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(74)))), ((int)(((byte)(148)))));
+            this.buttonLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(214)))), ((int)(((byte)(216)))));
+            this.buttonLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonLogout.BorderRadius = 0;
+            this.buttonLogout.ButtonText = "Logout";
+            this.buttonLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonLogout.DisabledColor = System.Drawing.Color.Gray;
+            this.buttonLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogout.ForeColor = System.Drawing.Color.Black;
+            this.buttonLogout.Iconcolor = System.Drawing.Color.Transparent;
+            this.buttonLogout.Iconimage = null;
+            this.buttonLogout.Iconimage_right = null;
+            this.buttonLogout.Iconimage_right_Selected = null;
+            this.buttonLogout.Iconimage_Selected = null;
+            this.buttonLogout.IconMarginLeft = 0;
+            this.buttonLogout.IconMarginRight = 0;
+            this.buttonLogout.IconRightVisible = true;
+            this.buttonLogout.IconRightZoom = 0D;
+            this.buttonLogout.IconVisible = true;
+            this.buttonLogout.IconZoom = 90D;
+            this.buttonLogout.IsTab = false;
+            this.buttonLogout.Location = new System.Drawing.Point(0, 370);
+            this.buttonLogout.Name = "buttonLogout";
+            this.buttonLogout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(214)))), ((int)(((byte)(216)))));
+            this.buttonLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(74)))), ((int)(((byte)(148)))));
+            this.buttonLogout.OnHoverTextColor = System.Drawing.Color.Black;
+            this.buttonLogout.selected = false;
+            this.buttonLogout.Size = new System.Drawing.Size(219, 48);
+            this.buttonLogout.TabIndex = 9;
+            this.buttonLogout.Text = "Logout";
+            this.buttonLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.buttonLogout.Textcolor = System.Drawing.Color.Red;
+            this.buttonLogout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
             // 
             // flowLayoutPanel1
             // 
@@ -217,6 +257,7 @@
             this.bunifuFlatButton1.ButtonText = "Dashboard";
             this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton1.Iconimage = null;
             this.bunifuFlatButton1.Iconimage_right = null;
@@ -252,6 +293,7 @@
             this.buttonUser.ButtonText = "Cadastrar Usuário";
             this.buttonUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonUser.DisabledColor = System.Drawing.Color.Gray;
+            this.buttonUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUser.Iconcolor = System.Drawing.Color.Transparent;
             this.buttonUser.Iconimage = null;
             this.buttonUser.Iconimage_right = null;
@@ -287,6 +329,7 @@
             this.buttonRelatorio.ButtonText = "Emitir Relatório";
             this.buttonRelatorio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonRelatorio.DisabledColor = System.Drawing.Color.Gray;
+            this.buttonRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRelatorio.Iconcolor = System.Drawing.Color.Transparent;
             this.buttonRelatorio.Iconimage = null;
             this.buttonRelatorio.Iconimage_right = null;
@@ -322,6 +365,7 @@
             this.buttonAtivdade.ButtonText = "Cadastro de Aividades";
             this.buttonAtivdade.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonAtivdade.DisabledColor = System.Drawing.Color.Gray;
+            this.buttonAtivdade.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAtivdade.Iconcolor = System.Drawing.Color.Transparent;
             this.buttonAtivdade.Iconimage = null;
             this.buttonAtivdade.Iconimage_right = null;
@@ -357,6 +401,7 @@
             this.buttonModali.ButtonText = "Inclusão de Modalidade";
             this.buttonModali.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonModali.DisabledColor = System.Drawing.Color.Gray;
+            this.buttonModali.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonModali.Iconcolor = System.Drawing.Color.Transparent;
             this.buttonModali.Iconimage = null;
             this.buttonModali.Iconimage_right = null;
@@ -392,6 +437,7 @@
             this.buttonGrupo.ButtonText = "Inclusao de Grupo";
             this.buttonGrupo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonGrupo.DisabledColor = System.Drawing.Color.Gray;
+            this.buttonGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonGrupo.Iconcolor = System.Drawing.Color.Transparent;
             this.buttonGrupo.Iconimage = null;
             this.buttonGrupo.Iconimage_right = null;
@@ -434,7 +480,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(43, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(151, 23);
@@ -445,7 +491,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(43, 1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 23);
@@ -629,5 +675,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
+        private Bunifu.Framework.UI.BunifuFlatButton buttonLogout;
     }
 }
