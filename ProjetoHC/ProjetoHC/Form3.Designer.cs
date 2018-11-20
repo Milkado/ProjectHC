@@ -292,7 +292,8 @@
             this.buttonUser.BorderRadius = 0;
             this.buttonUser.ButtonText = "Cadastrar Usuário";
             this.buttonUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonUser.DisabledColor = System.Drawing.Color.Gray;
+            this.buttonUser.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.buttonUser.Enabled = false;
             this.buttonUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUser.Iconcolor = System.Drawing.Color.Transparent;
             this.buttonUser.Iconimage = null;

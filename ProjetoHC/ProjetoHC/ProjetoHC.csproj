@@ -102,12 +102,6 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmAtivCom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,12 +113,6 @@
     </Compile>
     <Compile Include="FrmRelatorios.Designer.cs">
       <DependentUpon>FrmRelatorios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmUsuario.Designer.cs">
-      <DependentUpon>FrmUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalImages.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -140,6 +128,12 @@
     </Compile>
     <Compile Include="LoginID.cs" />
     <Compile Include="Modalidade.cs" />
+    <Compile Include="ModalidadeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ModalidadeControl.Designer.cs">
+      <DependentUpon>ModalidadeControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Relatorios.cs">
@@ -149,6 +143,12 @@
       <DependentUpon>Relatorios.cs</DependentUpon>
     </Compile>
     <Compile Include="Users.cs" />
+    <Compile Include="UsuarioComtrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsuarioComtrol.Designer.cs">
+      <DependentUpon>UsuarioComtrol.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,14 +161,8 @@
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmAtivCom.resx">
       <DependentUpon>FrmAtivCom.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmUsuario.resx">
-      <DependentUpon>FrmUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GlobalImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -176,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GrupoControl.resx">
       <DependentUpon>GrupoControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModalidadeControl.resx">
+      <DependentUpon>ModalidadeControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -189,6 +186,9 @@
     </Compile>
     <EmbeddedResource Include="Relatorios.resx">
       <DependentUpon>Relatorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsuarioComtrol.resx">
+      <DependentUpon>UsuarioComtrol.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

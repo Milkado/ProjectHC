@@ -99,7 +99,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.50498F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.49502F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 162F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 163F));
             this.tableLayoutPanel1.Controls.Add(this.panelGravar, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panelExcluir, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panelCancel, 2, 0);
@@ -140,7 +140,7 @@
             this.panelExcluir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelExcluir.Location = new System.Drawing.Point(148, 3);
             this.panelExcluir.Name = "panelExcluir";
-            this.panelExcluir.Size = new System.Drawing.Size(149, 64);
+            this.panelExcluir.Size = new System.Drawing.Size(148, 64);
             this.panelExcluir.TabIndex = 1;
             // 
             // btn_excluir
@@ -161,9 +161,9 @@
             // 
             this.panelCancel.Controls.Add(this.btn_cancel);
             this.panelCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCancel.Location = new System.Drawing.Point(303, 3);
+            this.panelCancel.Location = new System.Drawing.Point(302, 3);
             this.panelCancel.Name = "panelCancel";
-            this.panelCancel.Size = new System.Drawing.Size(157, 64);
+            this.panelCancel.Size = new System.Drawing.Size(158, 64);
             this.panelCancel.TabIndex = 2;
             // 
             // btn_cancel

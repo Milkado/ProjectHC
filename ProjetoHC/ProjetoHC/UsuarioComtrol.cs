@@ -1,35 +1,38 @@
-﻿using Oracle.ManagedDataAccess.Client;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.ManagedDataAccess.Client;
 
 namespace ProjetoHC
 {
-    public partial class FrmUsuario : Form
+    public partial class UsuarioComtrol : UserControl
     {
-        public FrmUsuario()
+        public UsuarioComtrol()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
+            tableTop.Dock = DockStyle.Top;
+            panelID.Dock = DockStyle.Fill;
+            panelSenha.Dock = DockStyle.Fill;
+            panelConfirmar.Dock = DockStyle.Fill;
+            panelUser.Dock = DockStyle.Fill;           
+            panelGravar.Dock = DockStyle.Fill;
+            panelExcluir.Dock = DockStyle.Fill;
+            panelCancel.Dock = DockStyle.Fill;
+            panelBottom.Dock = DockStyle.Bottom;
+            //dgvUser.Dock = DockStyle.Fill;
+            SelectUsers();
         }
 
         private Users userAtual;
         private DAL_Users dal = new DAL_Users();
         OracleConnection connection = DBConnection.DB_Connection;
-
-        private void FrmUsuario_Load(object sender, EventArgs e)
-        {
-            if (LoginID.UserID == "admin")
-            {
-                btnExcluir.Visible = true;
-                dgvUser.Visible = true;
-            }
-        }
 
         public void ClearControls()
         {
@@ -66,12 +69,12 @@ namespace ProjetoHC
             Users users = new Users();
             OracleConnection connection = DBConnection.DB_Connection;
             connection.Open();
-            
+
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = connection;
             cmd.CommandText = "select id_user, user_name, user_password from tb_user where id_user = :id";
             cmd.Parameters.Add(":id", id_user);
-            connection.Close();
+            
             using (OracleDataReader reader = cmd.ExecuteReader())
             {
                 while (reader.Read())
@@ -89,17 +92,18 @@ namespace ProjetoHC
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            if (txtPassword.Text == txtConfirm.Text) { 
-            dal.Save(new Users()
+            if (txtPassword.Text == txtConfirm.Text)
             {
-                id_user = string.IsNullOrEmpty(txtIdUsuario.Text) ? (long?)null : Convert.ToInt64(txtIdUsuario.Text),
-                user_name = txtUser.Text,
-                user_password = txtPassword.Text
-            });
-            MessageBox.Show("Manutenção feita com sucesso!");
+                dal.Save(new Users()
+                {
+                    id_user = string.IsNullOrEmpty(txtIdUsuario.Text) ? (long?)null : Convert.ToInt64(txtIdUsuario.Text),
+                    user_name = txtUser.Text,
+                    user_password = txtPassword.Text
+                });
+                MessageBox.Show("Manutenção feita com sucesso!");
 
 
-            ClearControls();
+                ClearControls();
             }
             else
             {
@@ -110,13 +114,6 @@ namespace ProjetoHC
         private void btnCancel_Click(object sender, EventArgs e)
         {
             ClearControls();
-        }
-
-        private void btnReturn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrmMenu frmMenu = new FrmMenu();
-            frmMenu.Show();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -139,9 +136,8 @@ namespace ProjetoHC
                 return;
             this.userAtual = GetById(Convert.ToInt64(dgvUser.Rows[e.RowIndex].Cells[0].Value));
             txtIdUsuario.Text = this.userAtual.id_user.ToString();
-            txtIdUsuario.Text = this.userAtual.user_name;
+            txtUser.Text = this.userAtual.user_name;
             txtPassword.Text = this.userAtual.user_password;
         }
     }
-
 }

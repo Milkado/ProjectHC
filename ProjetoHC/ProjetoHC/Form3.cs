@@ -27,10 +27,17 @@ namespace ProjetoHC
         dashControl dashControl = new dashControl();
         Relatorios Relatorios = new Relatorios();
         GrupoControl grupo = new GrupoControl();
+        UsuarioComtrol UsuarioComtrol = new UsuarioComtrol();
         
         void userAdmin()
         {
-            
+            if(LoginID.UserID == "admin")
+            {
+                buttonUser.Enabled = true;
+            }else
+            {
+                buttonUser.Enabled = false;
+            }
         }
 
         private void btnTelaModal_Click(object sender, EventArgs e)
@@ -60,9 +67,7 @@ namespace ProjetoHC
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmUsuario frmUsuario = new FrmUsuario();
-            frmUsuario.Show();
+            
         }
 
         private void btnAC_Click(object sender, EventArgs e)
@@ -150,9 +155,9 @@ namespace ProjetoHC
 
         private void buttonUser_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmUsuario frmUsuario = new FrmUsuario();
-            frmUsuario.Show();
+
+            container.Controls.Clear();
+            container.Controls.Add(UsuarioComtrol);
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
