@@ -15,15 +15,13 @@ namespace ProjetoHC
         {
             OracleConnection connection = DBConnection.DB_Connection;
             string cmdText = "select nome, id_aluno from aluno";
-            OracleCommand cmd = new OracleCommand(cmdText);
-            cmd.Connection = connection;
-            OracleDataAdapter da = new OracleDataAdapter(cmd);
+            OracleDataAdapter da = new OracleDataAdapter(cmdText, connection);
             connection.Open();
             DataSet ds = new DataSet();
-            da.Fill(ds, "Aluno");
+            da.Fill(ds, "aluno");
             comboBox.DisplayMember = "nome";
             comboBox.ValueMember = "id_aluno";
-            comboBox.DataSource = ds.Tables["Aluno"];
+            comboBox.DataSource = ds.Tables["aluno"];
             comboBox.SelectedIndex = -1;
             connection.Close();
         }
