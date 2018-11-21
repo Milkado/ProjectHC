@@ -112,7 +112,7 @@
             this.tableCenter.ColumnCount = 3;
             this.tableCenter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.06972F));
             this.tableCenter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.93028F));
-            this.tableCenter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 260F));
+            this.tableCenter.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 262F));
             this.tableCenter.Controls.Add(this.panelCancel, 2, 0);
             this.tableCenter.Controls.Add(this.panelExcluir, 1, 0);
             this.tableCenter.Controls.Add(this.panelGravar, 0, 0);
@@ -128,9 +128,9 @@
             // 
             this.panelCancel.Controls.Add(this.btnCancel);
             this.panelCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCancel.Location = new System.Drawing.Point(477, 3);
+            this.panelCancel.Location = new System.Drawing.Point(475, 3);
             this.panelCancel.Name = "panelCancel";
-            this.panelCancel.Size = new System.Drawing.Size(255, 193);
+            this.panelCancel.Size = new System.Drawing.Size(257, 193);
             this.panelCancel.TabIndex = 2;
             // 
             // btnCancel
@@ -149,9 +149,9 @@
             // 
             this.panelExcluir.Controls.Add(this.btnExcluir);
             this.panelExcluir.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelExcluir.Location = new System.Drawing.Point(250, 3);
+            this.panelExcluir.Location = new System.Drawing.Point(249, 3);
             this.panelExcluir.Name = "panelExcluir";
-            this.panelExcluir.Size = new System.Drawing.Size(221, 193);
+            this.panelExcluir.Size = new System.Drawing.Size(220, 193);
             this.panelExcluir.TabIndex = 1;
             // 
             // btnExcluir
@@ -172,7 +172,7 @@
             this.panelGravar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelGravar.Location = new System.Drawing.Point(3, 3);
             this.panelGravar.Name = "panelGravar";
-            this.panelGravar.Size = new System.Drawing.Size(241, 193);
+            this.panelGravar.Size = new System.Drawing.Size(240, 193);
             this.panelGravar.TabIndex = 0;
             // 
             // btnGravar
@@ -205,6 +205,7 @@
             this.dgvAtiv.Name = "dgvAtiv";
             this.dgvAtiv.Size = new System.Drawing.Size(735, 144);
             this.dgvAtiv.TabIndex = 23;
+            this.dgvAtiv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAtiv_CellClick);
             // 
             // tableTop
             // 
@@ -401,6 +402,8 @@
             this.cmbBoxAluno.Name = "cmbBoxAluno";
             this.cmbBoxAluno.Size = new System.Drawing.Size(129, 21);
             this.cmbBoxAluno.TabIndex = 8;
+            this.cmbBoxAluno.SelectedIndexChanged += new System.EventHandler(this.cmbBoxAluno_SelectedIndexChanged);
+            this.cmbBoxAluno.SelectedValueChanged += new System.EventHandler(this.cmbBoxAluno_SelectedValueChanged);
             // 
             // panelAtividade
             // 

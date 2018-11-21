@@ -41,7 +41,7 @@ namespace ProjetoHC
         private void Insert(Atividade atividade)
         {
             OracleCommand cmd = connection.CreateCommand();
-            cmd.CommandText = "insert into atividade(atividade, local_realiz, documento, tempo, id_grupo, id_modalidade, id_aluno) values (:atividade, :local_realiz, :documento, :tempo, :id_grupo, :id_modalidade, :id_aluno)";
+            cmd.CommandText = "insert into atividade(atividade_realizada, local_realiz, documento, tempo, id_grupo, id_modalidade, id_aluno) values (:atividade, :local_realiz, :documento, :tempo, :id_grupo, :id_modalidade, :id_aluno)";
             cmd.Parameters.Add(":atividade", atividade.atividade);
             cmd.Parameters.Add(":local_realiz", atividade.local_realiz);
             cmd.Parameters.Add(":documento", atividade.documento);

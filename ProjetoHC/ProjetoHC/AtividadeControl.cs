@@ -32,6 +32,7 @@ namespace ProjetoHC
             panelCancel.Dock = DockStyle.Fill;
             alunoCombo.ComboAluno(cmbBoxAluno);
             combo.ComboGrupo(cmbBoxGrupo);
+            SelectAtividade();
             
         }
 
@@ -40,8 +41,26 @@ namespace ProjetoHC
         private DAL_Atividades dal = new DAL_Atividades();
         FillComboGrupo combo = new FillComboGrupo();
         DAL_Horas horas = new DAL_Horas();
-        private Horas horaAtual;
         FillComboAluno alunoCombo = new FillComboAluno();
+        public void SelectAtividade()
+        {
+            connection.Open();
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = connection;
+            cmd.CommandText = "select id_atividade, atividade_realizada, local_realiz, documento, tempo, g.descricao as Grupo, m.nome as Modalidade, s.nome as Aluno, s.matricula " +
+                "from atividade a " +
+                "inner join modalidade m on (a.id_modalidade = m.id_modalidade) " +
+                "inner join grupo g on (a.id_grupo = g.id_grupo) " +
+                "inner join aluno s on (a.id_aluno = s.id_aluno) " +
+                "order by id_atividade";
+            OracleDataAdapter adapter = new OracleDataAdapter(cmd.CommandText, connection);
+            OracleCommandBuilder builder = new OracleCommandBuilder(adapter);
+            DataTable data = new DataTable();
+            adapter.Fill(data);
+            dgvAtiv.DataSource = data;
+            connection.Close();
+        }
+
 
         public void ClearControls()
         {
@@ -59,19 +78,7 @@ namespace ProjetoHC
             txtAtiv.Focus();
         }
 
-        public void SelectAtividade()
-        {
-            connection.Open();
-            OracleCommand cmd = new OracleCommand();
-            cmd.Connection = connection;
-            cmd.CommandText = "select id_, nome, pont_maxima, tipo_pont, g.descricao, comprovante from modalidade m inner join grupo g on (m.id_grupo = g.id_grupo) order by id_modalidade";
-            OracleDataAdapter adapter = new OracleDataAdapter(cmd.CommandText, connection);
-            OracleCommandBuilder builder = new OracleCommandBuilder(adapter);
-            DataTable data = new DataTable();
-            adapter.Fill(data);
-            dgvAtiv.DataSource = data;
-            connection.Close();
-        }
+        
 
         void FillComboModalidade()
         {
@@ -119,15 +126,87 @@ namespace ProjetoHC
                 id_aluno = Convert.ToInt32(cmbBoxAluno.SelectedValue)
 
             });
-            horas.Procedure(new Horas(), new Atividade
+            horas.Procedure(new Horas()
             {
                 id_aluno = Convert.ToInt32(cmbBoxAluno.SelectedValue),
-                tempo = Convert.ToInt32(txtAtivTempo.Text)
+                hora_total = Convert.ToInt32(txtAtivTempo.Text)
             });
             MessageBox.Show("Manutenção feita com sucesso!");
 
 
             ClearControls();
+        }
+
+        private void cmbBoxAluno_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private Atividade GetById(long id_atividade)
+        {
+
+            Atividade atividade = new Atividade();
+            OracleConnection connection = DBConnection.DB_Connection;
+            connection.Close();
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = connection;
+            cmd.CommandText = "select id_atividade, atividade_realizada, local_realiz, documento, tempo, id_grupo, id_modalidade, id_aluno from atividade where id_atividade = :id";
+            cmd.Parameters.Add(":id", id_atividade);
+            connection.Open();
+            using (OracleDataReader reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    atividade.id_atividade = reader.GetInt32(0);
+                    atividade.atividade = reader.GetString(1);
+                    atividade.local_realiz = reader.GetString(2);
+                    atividade.documento = reader.GetString(3);
+                    atividade.tempo = reader.GetInt32(4);
+                    atividade.id_grupo = reader.GetInt32(5);
+                    atividade.id_modalidade = reader.GetInt32(6);
+                    atividade.id_aluno = reader.GetInt32(7);
+                }
+            }
+            connection.Close();
+            return atividade;
+        }
+
+        private void dgvAtiv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.ColumnIndex < 0)
+                return;
+            this.atividadeAtual = GetById(Convert.ToInt64(dgvAtiv.Rows[e.RowIndex].Cells[0].Value));
+            txtidAtiv.Text = this.atividadeAtual.id_atividade.ToString();
+            txtAtiv.Text = this.atividadeAtual.atividade;
+            txtLocal.Text = this.atividadeAtual.local_realiz;
+            txtDocuVal.Text = this.atividadeAtual.documento;
+            cmbBoxGrupo.SelectedValue = this.atividadeAtual.id_grupo;
+            cmbBoxModal.SelectedValue = this.atividadeAtual.id_modalidade;
+            cmbBoxAluno.SelectedValue = this.atividadeAtual.id_aluno;
+
+        }
+
+        private void cmbBoxAluno_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (this.cmbBoxAluno.SelectedIndex > -1)
+            {
+                connection.Close();
+                string cmdText = "select matricula from aluno where id_aluno = :id_combo";
+                OracleCommand cmd = new OracleCommand(cmdText);
+                cmd.Connection = connection;
+                cmd.Parameters.Add(":id_combo", cmbBoxAluno.SelectedValue);
+                connection.Open();
+                cmd.ExecuteNonQuery();
+                OracleDataReader reader;
+                reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string matricula = (string)reader["matricula"].ToString();
+                    txtMat.Text = matricula;
+                }
+                connection.Close();
+            }
         }
     }
 }

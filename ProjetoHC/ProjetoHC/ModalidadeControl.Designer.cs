@@ -30,6 +30,13 @@
         {
             this.container = new System.Windows.Forms.Panel();
             this.panelMid = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panelGravar = new System.Windows.Forms.Panel();
+            this.BtnCreate = new System.Windows.Forms.Button();
+            this.panelExcluir = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.panelCancel = new System.Windows.Forms.Panel();
+            this.btnCls = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
             this.panelComprovante = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,16 +59,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cmbBoxPont = new System.Windows.Forms.ComboBox();
             this.panelBottom = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panelGravar = new System.Windows.Forms.Panel();
-            this.BtnCreate = new System.Windows.Forms.Button();
-            this.panelExcluir = new System.Windows.Forms.Panel();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.dtGvModalidade = new System.Windows.Forms.DataGridView();
-            this.panelCancel = new System.Windows.Forms.Panel();
-            this.btnCls = new System.Windows.Forms.Button();
             this.container.SuspendLayout();
             this.panelMid.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panelGravar.SuspendLayout();
+            this.panelExcluir.SuspendLayout();
+            this.panelCancel.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.panelComprovante.SuspendLayout();
             this.tableTop.SuspendLayout();
@@ -71,11 +75,7 @@
             this.panelGrupo.SuspendLayout();
             this.panelPont.SuspendLayout();
             this.panelBottom.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.panelGravar.SuspendLayout();
-            this.panelExcluir.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGvModalidade)).BeginInit();
-            this.panelCancel.SuspendLayout();
             this.SuspendLayout();
             // 
             // container
@@ -97,6 +97,93 @@
             this.panelMid.Name = "panelMid";
             this.panelMid.Size = new System.Drawing.Size(735, 391);
             this.panelMid.TabIndex = 3;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.38298F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.61702F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 265F));
+            this.tableLayoutPanel1.Controls.Add(this.panelGravar, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelExcluir, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelCancel, 2, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 276);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(735, 115);
+            this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // panelGravar
+            // 
+            this.panelGravar.Controls.Add(this.BtnCreate);
+            this.panelGravar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelGravar.Location = new System.Drawing.Point(3, 3);
+            this.panelGravar.Name = "panelGravar";
+            this.panelGravar.Size = new System.Drawing.Size(212, 109);
+            this.panelGravar.TabIndex = 0;
+            // 
+            // BtnCreate
+            // 
+            this.BtnCreate.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BtnCreate.FlatAppearance.BorderSize = 0;
+            this.BtnCreate.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BtnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCreate.Image = global::ProjetoHC.GlobalImages.button_gravar;
+            this.BtnCreate.Location = new System.Drawing.Point(57, 35);
+            this.BtnCreate.Name = "BtnCreate";
+            this.BtnCreate.Size = new System.Drawing.Size(105, 37);
+            this.BtnCreate.TabIndex = 1;
+            this.BtnCreate.UseVisualStyleBackColor = true;
+            this.BtnCreate.Click += new System.EventHandler(this.BtnCreate_Click);
+            // 
+            // panelExcluir
+            // 
+            this.panelExcluir.Controls.Add(this.btnDelete);
+            this.panelExcluir.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelExcluir.Location = new System.Drawing.Point(221, 3);
+            this.panelExcluir.Name = "panelExcluir";
+            this.panelExcluir.Size = new System.Drawing.Size(245, 109);
+            this.panelExcluir.TabIndex = 1;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Image = global::ProjetoHC.GlobalImages.button_excluir2;
+            this.btnDelete.Location = new System.Drawing.Point(77, 35);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(105, 37);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // panelCancel
+            // 
+            this.panelCancel.Controls.Add(this.btnCls);
+            this.panelCancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCancel.Location = new System.Drawing.Point(472, 3);
+            this.panelCancel.Name = "panelCancel";
+            this.panelCancel.Size = new System.Drawing.Size(260, 109);
+            this.panelCancel.TabIndex = 2;
+            // 
+            // btnCls
+            // 
+            this.btnCls.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCls.FlatAppearance.BorderSize = 0;
+            this.btnCls.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCls.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCls.Image = global::ProjetoHC.GlobalImages.button_cancelar;
+            this.btnCls.Location = new System.Drawing.Point(56, 35);
+            this.btnCls.Name = "btnCls";
+            this.btnCls.Size = new System.Drawing.Size(105, 37);
+            this.btnCls.TabIndex = 4;
+            this.btnCls.UseVisualStyleBackColor = true;
+            this.btnCls.Click += new System.EventHandler(this.btnCls_Click);
             // 
             // panelTop
             // 
@@ -146,7 +233,7 @@
             this.tableTop.ColumnCount = 3;
             this.tableTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.53114F));
             this.tableTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.46886F));
-            this.tableTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 189F));
+            this.tableTop.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 190F));
             this.tableTop.Controls.Add(this.panelId, 0, 0);
             this.tableTop.Controls.Add(this.panelNome, 1, 0);
             this.tableTop.Controls.Add(this.panel2, 0, 1);
@@ -169,7 +256,7 @@
             this.panelId.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelId.Location = new System.Drawing.Point(3, 3);
             this.panelId.Name = "panelId";
-            this.panelId.Size = new System.Drawing.Size(188, 51);
+            this.panelId.Size = new System.Drawing.Size(187, 51);
             this.panelId.TabIndex = 0;
             // 
             // txtIdModal
@@ -196,7 +283,7 @@
             this.panelNome.Controls.Add(this.label1);
             this.panelNome.Controls.Add(this.txtName);
             this.panelNome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelNome.Location = new System.Drawing.Point(197, 3);
+            this.panelNome.Location = new System.Drawing.Point(196, 3);
             this.panelNome.Name = "panelNome";
             this.panelNome.Size = new System.Drawing.Size(345, 51);
             this.panelNome.TabIndex = 3;
@@ -224,7 +311,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(188, 52);
+            this.panel2.Size = new System.Drawing.Size(187, 52);
             this.panel2.TabIndex = 1;
             // 
             // panelCarga
@@ -232,7 +319,7 @@
             this.panelCarga.Controls.Add(this.label2);
             this.panelCarga.Controls.Add(this.txtMH);
             this.panelCarga.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCarga.Location = new System.Drawing.Point(197, 60);
+            this.panelCarga.Location = new System.Drawing.Point(196, 60);
             this.panelCarga.Name = "panelCarga";
             this.panelCarga.Size = new System.Drawing.Size(345, 52);
             this.panelCarga.TabIndex = 2;
@@ -261,9 +348,9 @@
             this.panelGrupo.Controls.Add(this.label5);
             this.panelGrupo.Controls.Add(this.cmbBoxGrupo);
             this.panelGrupo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelGrupo.Location = new System.Drawing.Point(548, 60);
+            this.panelGrupo.Location = new System.Drawing.Point(547, 60);
             this.panelGrupo.Name = "panelGrupo";
-            this.panelGrupo.Size = new System.Drawing.Size(184, 52);
+            this.panelGrupo.Size = new System.Drawing.Size(185, 52);
             this.panelGrupo.TabIndex = 4;
             // 
             // label5
@@ -290,9 +377,9 @@
             this.panelPont.Controls.Add(this.label6);
             this.panelPont.Controls.Add(this.cmbBoxPont);
             this.panelPont.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPont.Location = new System.Drawing.Point(548, 3);
+            this.panelPont.Location = new System.Drawing.Point(547, 3);
             this.panelPont.Name = "panelPont";
-            this.panelPont.Size = new System.Drawing.Size(184, 51);
+            this.panelPont.Size = new System.Drawing.Size(185, 51);
             this.panelPont.TabIndex = 5;
             // 
             // label6
@@ -328,70 +415,6 @@
             this.panelBottom.Size = new System.Drawing.Size(735, 163);
             this.panelBottom.TabIndex = 1;
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.38298F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.61702F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 264F));
-            this.tableLayoutPanel1.Controls.Add(this.panelGravar, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panelExcluir, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panelCancel, 2, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 276);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(735, 115);
-            this.tableLayoutPanel1.TabIndex = 2;
-            // 
-            // panelGravar
-            // 
-            this.panelGravar.Controls.Add(this.BtnCreate);
-            this.panelGravar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelGravar.Location = new System.Drawing.Point(3, 3);
-            this.panelGravar.Name = "panelGravar";
-            this.panelGravar.Size = new System.Drawing.Size(212, 109);
-            this.panelGravar.TabIndex = 0;
-            // 
-            // BtnCreate
-            // 
-            this.BtnCreate.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BtnCreate.FlatAppearance.BorderSize = 2;
-            this.BtnCreate.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.WindowFrame;
-            this.BtnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCreate.Image = global::ProjetoHC.GlobalImages.button_gravar;
-            this.BtnCreate.Location = new System.Drawing.Point(57, 35);
-            this.BtnCreate.Name = "BtnCreate";
-            this.BtnCreate.Size = new System.Drawing.Size(105, 37);
-            this.BtnCreate.TabIndex = 1;
-            this.BtnCreate.UseVisualStyleBackColor = true;
-            this.BtnCreate.Click += new System.EventHandler(this.BtnCreate_Click);
-            // 
-            // panelExcluir
-            // 
-            this.panelExcluir.Controls.Add(this.btnDelete);
-            this.panelExcluir.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelExcluir.Location = new System.Drawing.Point(221, 3);
-            this.panelExcluir.Name = "panelExcluir";
-            this.panelExcluir.Size = new System.Drawing.Size(246, 109);
-            this.panelExcluir.TabIndex = 1;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnDelete.FlatAppearance.BorderSize = 2;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Image = global::ProjetoHC.GlobalImages.button_excluir2;
-            this.btnDelete.Location = new System.Drawing.Point(77, 35);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(105, 37);
-            this.btnDelete.TabIndex = 3;
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // dtGvModalidade
             // 
             this.dtGvModalidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -402,29 +425,6 @@
             this.dtGvModalidade.TabIndex = 15;
             this.dtGvModalidade.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGvModalidade_CellClick);
             // 
-            // panelCancel
-            // 
-            this.panelCancel.Controls.Add(this.btnCls);
-            this.panelCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCancel.Location = new System.Drawing.Point(473, 3);
-            this.panelCancel.Name = "panelCancel";
-            this.panelCancel.Size = new System.Drawing.Size(259, 109);
-            this.panelCancel.TabIndex = 2;
-            // 
-            // btnCls
-            // 
-            this.btnCls.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCls.FlatAppearance.BorderSize = 2;
-            this.btnCls.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCls.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCls.Image = global::ProjetoHC.GlobalImages.button_cancelar;
-            this.btnCls.Location = new System.Drawing.Point(56, 35);
-            this.btnCls.Name = "btnCls";
-            this.btnCls.Size = new System.Drawing.Size(105, 37);
-            this.btnCls.TabIndex = 4;
-            this.btnCls.UseVisualStyleBackColor = true;
-            this.btnCls.Click += new System.EventHandler(this.btnCls_Click);
-            // 
             // ModalidadeControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -434,6 +434,10 @@
             this.Size = new System.Drawing.Size(735, 554);
             this.container.ResumeLayout(false);
             this.panelMid.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panelGravar.ResumeLayout(false);
+            this.panelExcluir.ResumeLayout(false);
+            this.panelCancel.ResumeLayout(false);
             this.panelTop.ResumeLayout(false);
             this.panelComprovante.ResumeLayout(false);
             this.panelComprovante.PerformLayout();
@@ -449,11 +453,7 @@
             this.panelPont.ResumeLayout(false);
             this.panelPont.PerformLayout();
             this.panelBottom.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.panelGravar.ResumeLayout(false);
-            this.panelExcluir.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtGvModalidade)).EndInit();
-            this.panelCancel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

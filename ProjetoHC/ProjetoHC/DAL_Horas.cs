@@ -12,13 +12,13 @@ namespace ProjetoHC
         OracleConnection connection = DBConnection.DB_Connection;
        
 
-        public void Procedure(Horas horas, Atividade atividade)
+        public void Procedure(Horas horas)
         {
             OracleCommand cmd = connection.CreateCommand();
             cmd.CommandText = "sum_value";
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
             cmd.Parameters.Add("a_id", OracleDbType.Int32).Value = horas.id_aluno;
-            cmd.Parameters.Add("hora_ativ", OracleDbType.Int32).Value = atividade.tempo;            
+            cmd.Parameters.Add("hora_ativ", OracleDbType.Int32).Value = horas.hora_total;            
             connection.Open();
             cmd.ExecuteNonQuery();
             connection.Close();

@@ -156,7 +156,7 @@ namespace ProjetoHC
             txtMH.Text = this.modalidadeAtual.pont_maxima.ToString();
             txtDesc.Text = this.modalidadeAtual.comprovante;
             cmbBoxPont.Text = this.modalidadeAtual.tipo_pont;
-            cmbBoxGrupo.DisplayMember = cmbBoxGrupo.GetItemText(this.modalidadeAtual.id_grupo);
+            cmbBoxGrupo.SelectedValue = this.modalidadeAtual.id_grupo;
         }
     }
 }

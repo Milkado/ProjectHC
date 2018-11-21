@@ -1,5 +1,5 @@
 --------------------------------------------------------
---  Arquivo criado - Terça-feira-Novembro-20-2018   
+--  Arquivo criado - Quarta-feira-Novembro-21-2018   
 --------------------------------------------------------
 --------------------------------------------------------
 --  DDL for Sequence DEMO_CUST_SEQ
@@ -32,6 +32,11 @@
 
    CREATE SEQUENCE  "PROJECTHC"."SEQ_ID_ALUNO"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE ;
 --------------------------------------------------------
+--  DDL for Sequence SEQ_ID_ATIVIDADE
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "PROJECTHC"."SEQ_ID_ATIVIDADE"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 41 CACHE 20 NOORDER  NOCYCLE ;
+--------------------------------------------------------
 --  DDL for Sequence SEQ_ID_GRUPO
 --------------------------------------------------------
 
@@ -40,12 +45,12 @@
 --  DDL for Sequence SEQ_ID_HORA
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "PROJECTHC"."SEQ_ID_HORA"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE ;
+   CREATE SEQUENCE  "PROJECTHC"."SEQ_ID_HORA"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 41 CACHE 20 NOORDER  NOCYCLE ;
 --------------------------------------------------------
 --  DDL for Sequence SEQ_ID_MODALIDADE
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "PROJECTHC"."SEQ_ID_MODALIDADE"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE ;
+   CREATE SEQUENCE  "PROJECTHC"."SEQ_ID_MODALIDADE"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 41 CACHE 20 NOORDER  NOCYCLE ;
 --------------------------------------------------------
 --  DDL for Sequence SEQ_ID_USER
 --------------------------------------------------------
@@ -149,6 +154,11 @@ Insert into PROJECTHC.ALUNO (ID_ALUNO,NOME,MATRICULA) values ('5','Jalan Kendeth
 Insert into PROJECTHC.ALUNO (ID_ALUNO,NOME,MATRICULA) values ('6','George Miller','201700111');
 REM INSERTING into PROJECTHC.ATIVIDADE
 SET DEFINE OFF;
+Insert into PROJECTHC.ATIVIDADE (ID_ATIVIDADE,ATIVIDADE_REALIZADA,LOCAL_REALIZ,DOCUMENTO,TEMPO,ID_GRUPO,ID_MODALIDADE,ID_ALUNO) values ('1','Aulas de Libras','UniFOA Três Poços','Documento de validação de presença','4','1','21','6');
+Insert into PROJECTHC.ATIVIDADE (ID_ATIVIDADE,ATIVIDADE_REALIZADA,LOCAL_REALIZ,DOCUMENTO,TEMPO,ID_GRUPO,ID_MODALIDADE,ID_ALUNO) values ('2','Teste','UniFOA','Teste','20','1','21','6');
+Insert into PROJECTHC.ATIVIDADE (ID_ATIVIDADE,ATIVIDADE_REALIZADA,LOCAL_REALIZ,DOCUMENTO,TEMPO,ID_GRUPO,ID_MODALIDADE,ID_ALUNO) values ('3','Teste','teste','teste','12','1','21','6');
+Insert into PROJECTHC.ATIVIDADE (ID_ATIVIDADE,ATIVIDADE_REALIZADA,LOCAL_REALIZ,DOCUMENTO,TEMPO,ID_GRUPO,ID_MODALIDADE,ID_ALUNO) values ('21','Teste','Teste','Teste','1','1','21','2');
+Insert into PROJECTHC.ATIVIDADE (ID_ATIVIDADE,ATIVIDADE_REALIZADA,LOCAL_REALIZ,DOCUMENTO,TEMPO,ID_GRUPO,ID_MODALIDADE,ID_ALUNO) values ('22','AAAA','AAAA','AAAAA','1','1','21','3');
 REM INSERTING into PROJECTHC.GRUPO
 SET DEFINE OFF;
 Insert into PROJECTHC.GRUPO (ID_GRUPO,CARGA_MAXIMA,DESCRICAO) values ('1','100','Paricipação em Atividades de Ensino');
@@ -156,8 +166,18 @@ Insert into PROJECTHC.GRUPO (ID_GRUPO,CARGA_MAXIMA,DESCRICAO) values ('2','100',
 Insert into PROJECTHC.GRUPO (ID_GRUPO,CARGA_MAXIMA,DESCRICAO) values ('3','100','Participação em Atividades de Pesquisa');
 REM INSERTING into PROJECTHC.HORA_COMPLEMENTAR
 SET DEFINE OFF;
+Insert into PROJECTHC.HORA_COMPLEMENTAR (ID_HORA,HORA_TOTAL,HORA_VALIDA,ID_ALUNO) values ('22','1','1','3');
+Insert into PROJECTHC.HORA_COMPLEMENTAR (ID_HORA,HORA_TOTAL,HORA_VALIDA,ID_ALUNO) values ('1','20','20','1');
 REM INSERTING into PROJECTHC.MODALIDADE
 SET DEFINE OFF;
+Insert into PROJECTHC.MODALIDADE (ID_MODALIDADE,COMPROVANTE,PONT_MAXIMA,TIPO_PONT,ID_GRUPO,NOME) values ('21','Certificado, Declaração ou
+Documento afim atestando
+a participação com registro
+de carga horária.','40','CH da Discliplina','1','Disciplinas eletivas e/ou nivelaemnto');
+Insert into PROJECTHC.MODALIDADE (ID_MODALIDADE,COMPROVANTE,PONT_MAXIMA,TIPO_PONT,ID_GRUPO,NOME) values ('22','Certificado, Declaração ou
+Documento afim atestando
+a participação com registro
+de carga horária.','40','CH da Discliplina','1','Disciplinas oferecidas por outros cursos do UniFOA');
 REM INSERTING into PROJECTHC.TB_USER
 SET DEFINE OFF;
 Insert into PROJECTHC.TB_USER (ID_USER,USER_NAME,USER_PASSWORD,NOME_USER) values ('1','admin','admin','Administrador');
@@ -185,6 +205,21 @@ Insert into PROJECTHC.TB_USER (ID_USER,USER_NAME,USER_PASSWORD,NOME_USER) values
 
 /
 ALTER TRIGGER "PROJECTHC"."TRG_ID_ALUNO" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger TRG_ID_ATIVIDADE
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "PROJECTHC"."TRG_ID_ATIVIDADE" 
+    before insert on atividade
+    for each row
+    begin
+        select seq_id_atividade.nextval
+            into :new.id_atividade
+            from dual;
+    end;
+
+/
+ALTER TRIGGER "PROJECTHC"."TRG_ID_ATIVIDADE" ENABLE;
 --------------------------------------------------------
 --  DDL for Trigger TRG_ID_GRUPO
 --------------------------------------------------------
@@ -251,15 +286,17 @@ ALTER TRIGGER "PROJECTHC"."TRG_ID_USER" ENABLE;
 set define off;
 
   CREATE OR REPLACE PROCEDURE "PROJECTHC"."SUM_VALUE" (a_id in int, hora_ativ in int) is
-     begin
-  update hora_complementar
-  set hora_total = (hora_total + hora_ativ), hora_valida  = (hora_valida + hora_ativ) 
-  where id_aluno in a_id;
-
-  if sql%rowcount = 0 then
-    insert into hora_complementar (hora_total, hora_valida, id_aluno )
-    values (hora_ativ, hora_ativ, a_id );
-  end if;
+begin
+for c1 in (select * from hora_complementar) loop
+    -- Update if record is found.
+    update hora_complementar set hora_total = hora_total + hora_ativ, hora_valida = hora_valida + hora_ativ 
+    where id_aluno = a_id;
+    --If no record found then, Insert.
+    if SQL%ROWCOUNT = 0 then
+       insert into hora_complementar (id_aluno, hora_total, hora_valida) values (a_id, hora_ativ, hora_ativ);
+    end if;
+end loop;
+commit;
 end;
 
 /
