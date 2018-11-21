@@ -23,6 +23,9 @@ namespace ProjetoHC
             userAdmin();
             container.Controls.Add(dashControl);
             Icon = GlobalImages.icon;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.WindowState = FormWindowState.Maximized;
+            
         }
         dashControl dashControl = new dashControl();
         Relatorios Relatorios = new Relatorios();
@@ -42,9 +45,7 @@ namespace ProjetoHC
 
         private void btnTelaModal_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmModalidade frmModalidade = new FrmModalidade();
-            frmModalidade.Show();
+            
              
         }
 
@@ -72,16 +73,12 @@ namespace ProjetoHC
 
         private void btnAC_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmAtivCom frmAtivCom = new FrmAtivCom();
-            frmAtivCom.Show();
+            
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmRelatorios frmRelatorios = new FrmRelatorios();
-            frmRelatorios.Show();
+            
         }
 
         private void FrmMenu_MouseDown(object sender, MouseEventArgs e)
@@ -135,16 +132,17 @@ namespace ProjetoHC
 
         private void buttonModali_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmModalidade frmModalidade = new FrmModalidade();
-            frmModalidade.Show();
+            
+            ModalidadeControl modalidadeControl = new ModalidadeControl();
+            container.Controls.Clear();
+            container.Controls.Add(modalidadeControl);
         }
 
         private void buttonAtivdade_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmAtivCom frm = new FrmAtivCom();
-            frm.Show();
+            AtividadeControl atividadeControl = new AtividadeControl();
+            container.Controls.Clear();
+            container.Controls.Add(atividadeControl);
         }
 
         private void buttonRelatorio_Click(object sender, EventArgs e)

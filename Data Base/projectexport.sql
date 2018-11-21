@@ -30,22 +30,27 @@
 --  DDL for Sequence SEQ_ID_ALUNO
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "PROJECTHC"."SEQ_ID_ALUNO"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE ;
+   CREATE SEQUENCE  "PROJECTHC"."SEQ_ID_ALUNO"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE ;
 --------------------------------------------------------
 --  DDL for Sequence SEQ_ID_GRUPO
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "PROJECTHC"."SEQ_ID_GRUPO"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE ;
+   CREATE SEQUENCE  "PROJECTHC"."SEQ_ID_GRUPO"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 41 CACHE 20 NOORDER  NOCYCLE ;
+--------------------------------------------------------
+--  DDL for Sequence SEQ_ID_HORA
+--------------------------------------------------------
+
+   CREATE SEQUENCE  "PROJECTHC"."SEQ_ID_HORA"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE ;
 --------------------------------------------------------
 --  DDL for Sequence SEQ_ID_MODALIDADE
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "PROJECTHC"."SEQ_ID_MODALIDADE"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 41 CACHE 20 NOORDER  NOCYCLE ;
+   CREATE SEQUENCE  "PROJECTHC"."SEQ_ID_MODALIDADE"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 21 CACHE 20 NOORDER  NOCYCLE ;
 --------------------------------------------------------
 --  DDL for Sequence SEQ_ID_USER
 --------------------------------------------------------
 
-   CREATE SEQUENCE  "PROJECTHC"."SEQ_ID_USER"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 61 CACHE 20 NOORDER  NOCYCLE ;
+   CREATE SEQUENCE  "PROJECTHC"."SEQ_ID_USER"  MINVALUE 1 MAXVALUE 9999999999999999999999999999 INCREMENT BY 1 START WITH 81 CACHE 20 NOORDER  NOCYCLE ;
 --------------------------------------------------------
 --  DDL for Table ALUNO
 --------------------------------------------------------
@@ -91,21 +96,35 @@
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "SYSTEM" ;
 --------------------------------------------------------
+--  DDL for Table HORA_COMPLEMENTAR
+--------------------------------------------------------
+
+  CREATE TABLE "PROJECTHC"."HORA_COMPLEMENTAR" 
+   (	"ID_HORA" NUMBER(*,0), 
+	"HORA_TOTAL" NUMBER(*,0), 
+	"HORA_VALIDA" NUMBER(*,0), 
+	"ID_ALUNO" NUMBER(*,0)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS" ;
+--------------------------------------------------------
 --  DDL for Table MODALIDADE
 --------------------------------------------------------
 
   CREATE TABLE "PROJECTHC"."MODALIDADE" 
    (	"ID_MODALIDADE" NUMBER(*,0), 
+	"COMPROVANTE" VARCHAR2(255 BYTE), 
 	"PONT_MAXIMA" NUMBER(*,0), 
 	"TIPO_PONT" VARCHAR2(60 BYTE), 
 	"ID_GRUPO" NUMBER(*,0), 
-	"NOME" VARCHAR2(255 BYTE), 
-	"COMPROVANTE" VARCHAR2(255 BYTE)
+	"NOME" VARCHAR2(255 BYTE)
    ) SEGMENT CREATION IMMEDIATE 
   PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 NOCOMPRESS LOGGING
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
-  TABLESPACE "SYSTEM" ;
+  TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Table TB_USER
 --------------------------------------------------------
@@ -122,6 +141,12 @@
   TABLESPACE "SYSTEM" ;
 REM INSERTING into PROJECTHC.ALUNO
 SET DEFINE OFF;
+Insert into PROJECTHC.ALUNO (ID_ALUNO,NOME,MATRICULA) values ('1','Stephen Hawking','201600456');
+Insert into PROJECTHC.ALUNO (ID_ALUNO,NOME,MATRICULA) values ('2','Roger Murtaugh','2017102134');
+Insert into PROJECTHC.ALUNO (ID_ALUNO,NOME,MATRICULA) values ('3','Gordon Ramsay','201530456');
+Insert into PROJECTHC.ALUNO (ID_ALUNO,NOME,MATRICULA) values ('4','Jorg Ancrath','201800656');
+Insert into PROJECTHC.ALUNO (ID_ALUNO,NOME,MATRICULA) values ('5','Jalan Kendeth','201600436');
+Insert into PROJECTHC.ALUNO (ID_ALUNO,NOME,MATRICULA) values ('6','George Miller','201700111');
 REM INSERTING into PROJECTHC.ATIVIDADE
 SET DEFINE OFF;
 REM INSERTING into PROJECTHC.GRUPO
@@ -129,46 +154,10 @@ SET DEFINE OFF;
 Insert into PROJECTHC.GRUPO (ID_GRUPO,CARGA_MAXIMA,DESCRICAO) values ('1','100','Paricipação em Atividades de Ensino');
 Insert into PROJECTHC.GRUPO (ID_GRUPO,CARGA_MAXIMA,DESCRICAO) values ('2','100','Participação em eventos de extensção acadêmica');
 Insert into PROJECTHC.GRUPO (ID_GRUPO,CARGA_MAXIMA,DESCRICAO) values ('3','100','Participação em Atividades de Pesquisa');
+REM INSERTING into PROJECTHC.HORA_COMPLEMENTAR
+SET DEFINE OFF;
 REM INSERTING into PROJECTHC.MODALIDADE
 SET DEFINE OFF;
-Insert into PROJECTHC.MODALIDADE (ID_MODALIDADE,PONT_MAXIMA,TIPO_PONT,ID_GRUPO,NOME,COMPROVANTE) values ('1','40','CH da discplica','1','Disciplinas Eletivas e/ou nivelamento','Certificado, Declara? ou
-Documento afim atestando
-a participa? com registro
-de carga hor?a.');
-Insert into PROJECTHC.MODALIDADE (ID_MODALIDADE,PONT_MAXIMA,TIPO_PONT,ID_GRUPO,NOME,COMPROVANTE) values ('2','40','CH da Discliplina','1','Disciplinas oferecidas por outros cursos do UniFOA','Certificado, Declara? ou Documento afim atestando a participa? com registro de carga hor?a.');
-Insert into PROJECTHC.MODALIDADE (ID_MODALIDADE,PONT_MAXIMA,TIPO_PONT,ID_GRUPO,NOME,COMPROVANTE) values ('3','80','CH Certificada','1','Cursos de aperfei?mento e de aprofundamento acad?co-profissional','Certificado, Declara? ou Documento afim atestando a participa? com registro de carga hor?a.');
-Insert into PROJECTHC.MODALIDADE (ID_MODALIDADE,PONT_MAXIMA,TIPO_PONT,ID_GRUPO,NOME,COMPROVANTE) values ('21','80','CH Certificada','1','Exerc?o de Monitoria','Certificado, Declara? ou
-Documento afim atestando
-a participa? com registro
-de carga hor?a.');
-Insert into PROJECTHC.MODALIDADE (ID_MODALIDADE,PONT_MAXIMA,TIPO_PONT,ID_GRUPO,NOME,COMPROVANTE) values ('22','40','CH Certificada','1','Outros tipos','Certificado, Declara? ou
-Documento afim atestando
-a participa? com registro
-de carga hor?a.');
-Insert into PROJECTHC.MODALIDADE (ID_MODALIDADE,PONT_MAXIMA,TIPO_PONT,ID_GRUPO,NOME,COMPROVANTE) values ('23','80','CH Certificada','2','Est?os conveniados','Termo de Compromisso
-de Est?o (TCE) ou
-similar.
-Relat? t?ico1 de
-est?o com registro da
-carga hor?a.');
-Insert into PROJECTHC.MODALIDADE (ID_MODALIDADE,PONT_MAXIMA,TIPO_PONT,ID_GRUPO,NOME,COMPROVANTE) values ('24','40','CH Certificada','2','Extens?comunit?a','Certificado, Declara? ou
-Documento afim atestando
-a participa? com registro
-de carga hor?a.
-Relat? t?ico das
-atividades realizadas.');
-Insert into PROJECTHC.MODALIDADE (ID_MODALIDADE,PONT_MAXIMA,TIPO_PONT,ID_GRUPO,NOME,COMPROVANTE) values ('25','40','CH Certificada','2','Curso de capacita? de','Certificado, Declara? ou
-Documento afim atestando
-a participa? com registro
-de carga hor?a.
-Relat? t?ico das
-atividades realizadas.');
-Insert into PROJECTHC.MODALIDADE (ID_MODALIDADE,PONT_MAXIMA,TIPO_PONT,ID_GRUPO,NOME,COMPROVANTE) values ('26','80','CH Certificada','2','Cursos Ministrados','Certificado, Declara? ou
-Documento afim atestando
-a participa? com registro
-de carga hor?a.
-Relat? t?ico das
-atividades realizadas.');
 REM INSERTING into PROJECTHC.TB_USER
 SET DEFINE OFF;
 Insert into PROJECTHC.TB_USER (ID_USER,USER_NAME,USER_PASSWORD,NOME_USER) values ('1','admin','admin','Administrador');
@@ -180,7 +169,7 @@ Insert into PROJECTHC.TB_USER (ID_USER,USER_NAME,USER_PASSWORD,NOME_USER) values
   PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
-  TABLESPACE "SYSTEM" ;
+  TABLESPACE "USERS" ;
 --------------------------------------------------------
 --  DDL for Trigger TRG_ID_ALUNO
 --------------------------------------------------------
@@ -212,6 +201,21 @@ ALTER TRIGGER "PROJECTHC"."TRG_ID_ALUNO" ENABLE;
 /
 ALTER TRIGGER "PROJECTHC"."TRG_ID_GRUPO" ENABLE;
 --------------------------------------------------------
+--  DDL for Trigger TRG_ID_HORA
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "PROJECTHC"."TRG_ID_HORA" 
+    before insert on hora_complementar
+    for each row
+        begin
+            select seq_id_hora.nextval
+            into :new.id_hora
+            from dual;
+        end;
+
+/
+ALTER TRIGGER "PROJECTHC"."TRG_ID_HORA" ENABLE;
+--------------------------------------------------------
 --  DDL for Trigger TRG_ID_MODALIDADE
 --------------------------------------------------------
 
@@ -241,6 +245,24 @@ ALTER TRIGGER "PROJECTHC"."TRG_ID_MODALIDADE" ENABLE;
 
 /
 ALTER TRIGGER "PROJECTHC"."TRG_ID_USER" ENABLE;
+--------------------------------------------------------
+--  DDL for Procedure SUM_VALUE
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE PROCEDURE "PROJECTHC"."SUM_VALUE" (a_id in int, hora_ativ in int) is
+     begin
+  update hora_complementar
+  set hora_total = (hora_total + hora_ativ), hora_valida  = (hora_valida + hora_ativ) 
+  where id_aluno in a_id;
+
+  if sql%rowcount = 0 then
+    insert into hora_complementar (hora_total, hora_valida, id_aluno )
+    values (hora_ativ, hora_ativ, a_id );
+  end if;
+end;
+
+/
 --------------------------------------------------------
 --  DDL for Function CUSTOM_AUTH
 --------------------------------------------------------
@@ -319,6 +341,17 @@ end;
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "SYSTEM"  ENABLE;
 --------------------------------------------------------
+--  Constraints for Table MODALIDADE
+--------------------------------------------------------
+
+  ALTER TABLE "PROJECTHC"."MODALIDADE" ADD CONSTRAINT "PK_ID_MODALIDADES" PRIMARY KEY ("ID_MODALIDADE")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PROJECTHC"."MODALIDADE" MODIFY ("ID_GRUPO" NOT NULL ENABLE);
+  ALTER TABLE "PROJECTHC"."MODALIDADE" MODIFY ("ID_MODALIDADE" NOT NULL ENABLE);
+--------------------------------------------------------
 --  Constraints for Table ATIVIDADE
 --------------------------------------------------------
 
@@ -328,16 +361,15 @@ end;
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
   TABLESPACE "SYSTEM"  ENABLE;
 --------------------------------------------------------
---  Constraints for Table MODALIDADE
+--  Constraints for Table HORA_COMPLEMENTAR
 --------------------------------------------------------
 
-  ALTER TABLE "PROJECTHC"."MODALIDADE" MODIFY ("ID_MODALIDADE" NOT NULL ENABLE);
-  ALTER TABLE "PROJECTHC"."MODALIDADE" MODIFY ("ID_GRUPO" NOT NULL ENABLE);
-  ALTER TABLE "PROJECTHC"."MODALIDADE" ADD CONSTRAINT "PK_ID_MODALIDADES" PRIMARY KEY ("ID_MODALIDADE")
+  ALTER TABLE "PROJECTHC"."HORA_COMPLEMENTAR" ADD PRIMARY KEY ("ID_HORA")
   USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
   STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
   PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
-  TABLESPACE "SYSTEM"  ENABLE;
+  TABLESPACE "USERS"  ENABLE;
+  ALTER TABLE "PROJECTHC"."HORA_COMPLEMENTAR" MODIFY ("ID_HORA" NOT NULL ENABLE);
 --------------------------------------------------------
 --  Constraints for Table ALUNO
 --------------------------------------------------------
@@ -355,8 +387,12 @@ end;
 	  REFERENCES "PROJECTHC"."ALUNO" ("ID_ALUNO") ENABLE;
   ALTER TABLE "PROJECTHC"."ATIVIDADE" ADD CONSTRAINT "FK_ID_GRUPO_ATIVIDADE" FOREIGN KEY ("ID_GRUPO")
 	  REFERENCES "PROJECTHC"."GRUPO" ("ID_GRUPO") ENABLE;
-  ALTER TABLE "PROJECTHC"."ATIVIDADE" ADD CONSTRAINT "FK_ID_MODALIDADE_ATIVIDADE" FOREIGN KEY ("ID_MODALIDADE")
-	  REFERENCES "PROJECTHC"."MODALIDADE" ("ID_MODALIDADE") ENABLE;
+--------------------------------------------------------
+--  Ref Constraints for Table HORA_COMPLEMENTAR
+--------------------------------------------------------
+
+  ALTER TABLE "PROJECTHC"."HORA_COMPLEMENTAR" ADD CONSTRAINT "FK_ID_ALUNO_HORA" FOREIGN KEY ("ID_ALUNO")
+	  REFERENCES "PROJECTHC"."ALUNO" ("ID_ALUNO") ENABLE;
 --------------------------------------------------------
 --  Ref Constraints for Table MODALIDADE
 --------------------------------------------------------

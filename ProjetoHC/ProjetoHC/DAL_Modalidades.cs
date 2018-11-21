@@ -14,7 +14,7 @@ namespace ProjetoHC
         public void RemoveById(long? id_modalidades)
         {
             OracleCommand cmd = connection.CreateCommand();
-            cmd.CommandText = "delete from modaldiade where id_modalidade = :id";
+            cmd.CommandText = "delete from modalidade where id_modalidade = :id";
             cmd.Parameters.Add(":id", id_modalidades);
             connection.Open();
             cmd.ExecuteNonQuery();

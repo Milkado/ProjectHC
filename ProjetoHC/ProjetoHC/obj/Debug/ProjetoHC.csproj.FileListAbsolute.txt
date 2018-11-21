@@ -17,7 +17,6 @@ C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\bin\Debug\ProjetoHC.exe
 C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\bin\Debug\ProjetoHC.pdb
 C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\bin\Debug\Oracle.ManagedDataAccess.dll
 C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.csprojAssemblyReference.cache
-C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.FrmModalidade.resources
 C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.FrmLogar.resources
 C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.FrmMenu.resources
 C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.Properties.Resources.resources
@@ -26,10 +25,11 @@ C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.csproj.CoreCompile
 C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.csproj.CopyComplete
 C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.exe
 C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.pdb
-C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.FrmAtivCom.resources
 C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.GlobalImages.resources
 C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\bin\Debug\Bunifu_UI_v1.5.3.dll
 C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.dashControl.resources
 C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.Relatorios.resources
 C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.GrupoControl.resources
 C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.UsuarioComtrol.resources
+C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.ModalidadeControl.resources
+C:\projetos\ProjetoHC\ProjetoHC\ProjetoHC\obj\Debug\ProjetoHC.AtividadeControl.resources

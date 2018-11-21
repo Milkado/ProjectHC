@@ -1,63 +1,47 @@
-﻿using Oracle.ManagedDataAccess.Client;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Oracle.ManagedDataAccess.Client;
 
 namespace ProjetoHC
 {
-    public partial class FrmAtivCom : Form
+    public partial class AtividadeControl : UserControl
     {
-        public FrmAtivCom()
+        public AtividadeControl()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
+            tableTop.Dock = DockStyle.Top;
+            panelId.Dock = DockStyle.Fill;
+            panelAluno.Dock = DockStyle.Fill;
+            panelAtividade.Dock = DockStyle.Fill;
+            panelGrupo.Dock = DockStyle.Fill;
+            panelMatricula.Dock = DockStyle.Fill;
+            panelLocal.Dock = DockStyle.Fill;
+            panelTempo.Dock = DockStyle.Fill;
+            panelDocumento.Dock = DockStyle.Fill;
+            panelbottom.Dock = DockStyle.Bottom;
+            panelGravar.Dock = DockStyle.Fill;
+            panelExcluir.Dock = DockStyle.Fill;
+            panelCancel.Dock = DockStyle.Fill;
+            alunoCombo.ComboAluno(cmbBoxAluno);
             combo.ComboGrupo(cmbBoxGrupo);
-
-
+            
         }
 
         OracleConnection connection = DBConnection.DB_Connection;
         private Atividade atividadeAtual;
         private DAL_Atividades dal = new DAL_Atividades();
         FillComboGrupo combo = new FillComboGrupo();
-
-        /*void FillComboGrupo()
-        {
-            string cmdText = "select descricao, id_grupo from grupo";
-            OracleDataAdapter da = new OracleDataAdapter(cmdText, connection);
-            connection.Open();
-            DataSet ds = new DataSet();
-            da.Fill(ds, "Grupo");
-            cmbBoxGrupo.DisplayMember = "descricao";
-            cmbBoxGrupo.ValueMember = "id_grupo";
-            cmbBoxGrupo.DataSource = ds.Tables["Grupo"];
-            cmbBoxGrupo.SelectedIndex = -1;            
-            connection.Close();            
-        }*/
-
-        void FillComboModalidade()
-        {
-            connection.Close();
-            string cmdText = "select nome, id_modalidade from modalidade where id_grupo = :id_grupo";
-            OracleCommand cmd = new OracleCommand(cmdText);
-            cmd.Connection = connection;
-            cmd.Parameters.Add(":id_grupo", cmbBoxGrupo.SelectedValue);
-            OracleDataAdapter da = new OracleDataAdapter(cmd);
-            connection.Open();
-            DataSet ds = new DataSet();
-            da.Fill(ds, "Modalidade");
-            cmbBoxModal.DisplayMember = "nome";
-            cmbBoxModal.ValueMember = "id_modalidade";
-            cmbBoxModal.DataSource = ds.Tables["Modalidade"];
-            cmbBoxModal.SelectedIndex = -1;
-            connection.Close();
-            
-        }
+        DAL_Horas horas = new DAL_Horas();
+        private Horas horaAtual;
+        FillComboAluno alunoCombo = new FillComboAluno();
 
         public void ClearControls()
         {
@@ -84,19 +68,28 @@ namespace ProjetoHC
             OracleDataAdapter adapter = new OracleDataAdapter(cmd.CommandText, connection);
             OracleCommandBuilder builder = new OracleCommandBuilder(adapter);
             DataTable data = new DataTable();
-
             adapter.Fill(data);
-
-            //dtGvModalidade.DataSource = data;
-
+            dgvAtiv.DataSource = data;
             connection.Close();
         }
 
-        private void btnReturn_Click(object sender, EventArgs e)
+        void FillComboModalidade()
         {
-            this.Hide();
-            FrmMenu frmMenu = new FrmMenu();
-            frmMenu.Show();
+            connection.Close();
+            string cmdText = "select nome, id_modalidade from modalidade where id_grupo = :id_grupo";
+            OracleCommand cmd = new OracleCommand(cmdText);
+            cmd.Connection = connection;
+            cmd.Parameters.Add(":id_grupo", cmbBoxGrupo.SelectedValue);
+            OracleDataAdapter da = new OracleDataAdapter(cmd);
+            connection.Open();
+            DataSet ds = new DataSet();
+            da.Fill(ds, "Modalidade");
+            cmbBoxModal.DisplayMember = "nome";
+            cmbBoxModal.ValueMember = "id_modalidade";
+            cmbBoxModal.DataSource = ds.Tables["Modalidade"];
+            cmbBoxModal.SelectedIndex = -1;
+            connection.Close();
+
         }
 
         private void cmbBoxGrupo_SelectedValueChanged(object sender, EventArgs e)
@@ -112,29 +105,24 @@ namespace ProjetoHC
             }
         }
 
-        private void cmbBoxModal_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cmbBoxGrupo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnGravar_Click(object sender, EventArgs e)
         {
             dal.Save(new Atividade()
             {
                 id_atividade = string.IsNullOrEmpty(txtidAtiv.Text) ? (long?)null : Convert.ToInt64(txtidAtiv.Text),
                 atividade = txtAtiv.Text,
-                local_realiz =txtLocal.Text,
+                local_realiz = txtLocal.Text,
                 documento = txtDocuVal.Text,
-                tempo = Convert.ToInt32(txtAtivTempo),
+                tempo = Convert.ToInt32(txtAtivTempo.Text),
                 id_grupo = Convert.ToInt32(cmbBoxGrupo.SelectedValue),
                 id_modalidade = Convert.ToInt32(cmbBoxModal.SelectedValue),
                 id_aluno = Convert.ToInt32(cmbBoxAluno.SelectedValue)
 
+            });
+            horas.Procedure(new Horas(), new Atividade
+            {
+                id_aluno = Convert.ToInt32(cmbBoxAluno.SelectedValue),
+                tempo = Convert.ToInt32(txtAtivTempo.Text)
             });
             MessageBox.Show("Manutenção feita com sucesso!");
 
