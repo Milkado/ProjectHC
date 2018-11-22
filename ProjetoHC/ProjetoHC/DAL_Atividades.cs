@@ -24,7 +24,7 @@ namespace ProjetoHC
         private void Update(Atividade atividade)
         {
             OracleCommand cmd = connection.CreateCommand();
-            cmd.CommandText = "update atividade set atividade = :atividade, local_realiz = :local_realiz, documento = :documento, tempo = :tempo, id_grupo = :id_grupo, id_modalidade =  :id_modalidade, id_aluno = :id_aluno where id_atividade = :id";
+            cmd.CommandText = "update atividade set atividade_realizada = :atividade, local_realiz = :local_realiz, documento = :documento, tempo = :tempo, id_grupo = :id_grupo, id_modalidade =  :id_modalidade, id_aluno = :id_aluno where id_atividade = :id";
             cmd.Parameters.Add(":atividade", atividade.atividade);
             cmd.Parameters.Add(":local_realiz", atividade.local_realiz);
             cmd.Parameters.Add(":documento", atividade.documento);
@@ -56,8 +56,6 @@ namespace ProjetoHC
 
         public void Save(Atividade atividade)
         {
-
-
             if (atividade.id_atividade != null)
             {
                 this.Update(atividade);

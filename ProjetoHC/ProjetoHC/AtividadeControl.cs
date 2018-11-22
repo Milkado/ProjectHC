@@ -181,6 +181,7 @@ namespace ProjetoHC
             txtAtiv.Text = this.atividadeAtual.atividade;
             txtLocal.Text = this.atividadeAtual.local_realiz;
             txtDocuVal.Text = this.atividadeAtual.documento;
+            txtAtivTempo.Text = this.atividadeAtual.tempo.ToString();
             cmbBoxGrupo.SelectedValue = this.atividadeAtual.id_grupo;
             cmbBoxModal.SelectedValue = this.atividadeAtual.id_modalidade;
             cmbBoxAluno.SelectedValue = this.atividadeAtual.id_aluno;
